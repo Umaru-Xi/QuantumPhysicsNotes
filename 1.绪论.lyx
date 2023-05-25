@@ -1,0 +1,239 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+绪论
+\end_layout
+
+\begin_layout Enumerate
+经典物理学的困难:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+动量-能量关系: 
+\begin_inset Formula $E=\sqrt{m_{0}^{2}c^{4}+c^{2}p^{2}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+相对论质能关系: 
+\begin_inset Formula $E=\frac{m_{0}c^{2}}{\sqrt{1−\frac{v^{2}}{c^{2}}}};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Wien law: 
+\begin_inset Formula $ρ_{v}dv=bv^{3}e^{-\frac{av}{T}}dv$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Enumerate
+Rayleigh-Jeans law:
+\begin_inset Formula $ρ_{v}dv=\frac{8πv^{3}}{c^{3}}k_{B}Tdv,k_{B}$
+\end_inset
+
+−Boltzmann constant;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Planck假设: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+构成黑体的原子的性能和谐振子一样, 以给定的频率振荡; 
+\end_layout
+
+\begin_layout Enumerate
+黑体辐射空腔中振子的振动能量并不像经典理论所主张的那样和振幅平方成正比呈连续变化, 而是和振子的频率成正比并且只能取分立值; 
+\end_layout
+
+\begin_layout Enumerate
+Planck law: 
+\begin_inset Formula $\rho_{v}dv=\frac{8\pi hv^{3}}{c^{3}}\frac{1}{e^{\frac{hv}{k_{b}T}}-1}dv$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Planck constant: 
+\begin_inset Formula $h=6.62559×10^{−34}J⋅s$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+爱因斯坦关系: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E=hv=\hbar\omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vec{p}=\frac{E}{c}\vec{n}=\hbar\vec{k},\hbar=\frac{h}{2\pi}=1.054\times10^{-34}J\cdot s$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+德布罗意关系: 
+\begin_inset Formula $ω=\frac{E}{\hbar},k⃗=\frac{\vec{p}}{\hbar}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+原子结构的波尔理论: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+氢原子光谱: 
+\begin_inset Formula $v=R_{H}c\left(\frac{1}{m^{2}}−\frac{1}{n^{2}}\right),n>m,R_{H}=1.09677576×10^{7}m^{−1}$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Enumerate
+波尔假设: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+电子在原子中只能在某些特定的轨道上运动;
+\end_layout
+
+\begin_layout Enumerate
+处于定态的电子的角动量必须是
+\begin_inset Formula $\hbar=\frac{h}{2\pi}$
+\end_inset
+
+的整数倍;
+\end_layout
+
+\begin_layout Enumerate
+电子可以由一个定态跃迁到另一个定态, 产生辐射的吸收或发射;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+经典与量子的界限:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若在所研究的问题中能够认为
+\begin_inset Formula $h\to0$
+\end_inset
+
+, 则波和粒子便截然分开, 波粒二象性现象可以忽略; 
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $h$
+\end_inset
+
+在其中起重要作用, 则认为是量子现象;
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

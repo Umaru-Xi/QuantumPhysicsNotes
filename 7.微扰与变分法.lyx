@@ -1,0 +1,460 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+微扰与变分法(作业: 20230522)
+\end_layout
+
+\begin_layout Enumerate
+非简并的微扰方法: 若体系的哈密顿算符
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+不显含时间, 且可以分为两部分
+\begin_inset Formula $\hat{H}=\hat{H}^{(0)}+\hat{H}^{(1)}$
+\end_inset
+
+.
+ 其中
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+的本征值
+\begin_inset Formula $E_{n}^{(0)}$
+\end_inset
+
+和归一化本征矢
+\begin_inset Formula $\psi_{n}^{(0)}$
+\end_inset
+
+可以严格求出, 而另一部分
+\begin_inset Formula $\hat{H}^{(1)}$
+\end_inset
+
+足够小(
+\begin_inset Formula $\left|\frac{H'_{mn}}{E_{n}^{(0)}-E_{m}^{(0)}}\right|_{m\neq n}<<1$
+\end_inset
+
+), 则可将
+\begin_inset Formula $\hat{H}^{(1)}=\lambda\hat{H}'$
+\end_inset
+
+看作叠加在
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+上的微扰;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+处理方法: 将
+\begin_inset Formula $E_{n}$
+\end_inset
+
+和
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+按照
+\begin_inset Formula $\lambda$
+\end_inset
+
+展开: 
+\begin_inset Formula $\begin{cases}
+E_{n}=\sum\limits _{i=0}^{\infty}\lambda^{i}E_{n}^{(i)}\\
+\psi_{n}=\sum\limits _{i=0}^{\infty}\lambda^{i}\psi_{n}^{(i)}
+\end{cases}$
+\end_inset
+
+, 并带入定态方程
+\begin_inset Formula $(\hat{H}^{(0)}+\lambda\hat{H}')\sum\limits _{i=0}^{\infty}\lambda^{i}\psi_{n}^{(i)}$
+\end_inset
+
+
+\begin_inset Formula $=\sum\limits _{i=0}^{\infty}\lambda^{i}E_{n}^{(i)}\cdot\sum\limits _{j=0}^{\infty}\lambda^{j}\psi_{n}^{(j)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+由待定系数法并取
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+可得到: 
+\begin_inset Formula $\begin{cases}
+(\hat{H}^{(0)}-E_{n}^{(0)})\psi_{n}^{(0)}=0\\
+(\hat{H}^{(0)}-E_{n}^{(0)})\psi_{n}^{(1)}=-(\hat{H}'-E_{n}^{(1)})\psi_{n}^{(0)}\\
+(\hat{H}^{(0)}-E_{n}^{(0)})\psi_{n}^{(2)}=-(\hat{H}'-E_{n}^{(1)})\psi_{n}^{(1)}+E_{n}^{(2)}\psi_{n}^{(0)}\\
+...
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+能级的修正: 
+\begin_inset Formula $\begin{cases}
+E_{n}^{(0)}\\
+E_{n}^{(1)}=<\psi_{n}^{(0)}|\hat{H}'|\psi_{n}^{(0)}>=\int\psi_{n}^{(0)*}\hat{H}'\psi_{n}^{(0)}d\tau\\
+E_{n}^{(2)}=\sum\limits _{m\neq n}\frac{|\hat{H}'_{mn}|^{2}}{(E_{n}^{(0)}-E_{m}^{(0)})}\\
+...
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+波函数的修正: 
+\begin_inset Formula $\begin{cases}
+\psi_{n}^{(0)}\\
+\psi_{n}^{(1)}=\sum\limits _{m\neq n}\frac{<\psi_{m}^{(0)}|\hat{H}'|\psi_{n}^{(0)}>}{(E_{n}^{(0)}-E_{m}^{(0)})}\psi_{m}^{(0)}\\
+...
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+简并微扰方法: 若体系的第
+\begin_inset Formula $l$
+\end_inset
+
+个能级
+\begin_inset Formula $E_{l}^{(0)}$
+\end_inset
+
+是简并的, 且简并度为
+\begin_inset Formula $f_{l}$
+\end_inset
+
+, 则零级定态方程
+\begin_inset Formula $\hat{H}^{(0)}\phi_{lk}^{(0)}=E_{l}^{(0)}\phi_{lk}^{(0)},k=1,2,...,f_{l}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+处理方法: 正确的零级近似波函数必须满足零级修正方程, 其解的一般形式是
+\begin_inset Formula $\psi_{l}^{(0)}=\sum\limits _{k=1}^{f_{l}}\phi_{lk}^{(0)}a_{lk}^{(0)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+一级修正方程: 由
+\begin_inset Formula $(\hat{H}^{(0)}+\lambda\hat{H}')(\psi_{l}^{(0)}+\lambda\psi_{l}^{(1)})=(E_{l}^{(0)}+\lambda E_{l}^{(1)})(\psi_{l}^{(0)}+\lambda\psi_{l}^{(1)})$
+\end_inset
+
+得到
+\begin_inset Formula $\begin{cases}
+\lambda^{0}: & \hat{H}^{(0)}\psi_{l}^{(0)}=E_{l}^{(0)}\psi_{l}^{(0)}\\
+\lambda^{1}: & (\hat{H}^{(0)}\psi_{l}^{(1)}+\hat{H}'\psi_{l}^{(0)})=(E_{l}^{(0)}\psi_{l}^{(1)}+E_{l}^{(1)}\psi_{l}^{(0)})
+\end{cases}$
+\end_inset
+
+, 系统的一级近似波函数
+\begin_inset Formula $\psi_{l}^{(1)}=\sum\limits_{k=1}^{f_{l}}\psi_{lk}^{(0)}a_{lk}^{(1)}+\sum\limits_{l'\neq l}\phi_{l'}^{(0)}a_{l'l}^{(1)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+能级的一级修正: 
+\begin_inset Formula $E_{ln}^{(1)}$
+\end_inset
+
+可以通过久期方程
+\begin_inset Formula $\left|\begin{array}{cccc}
+H_{11}'-E_{l}^{(1)} & H_{12}' & ... & H_{1f_{l}}'\\
+H_{21}' & H_{22}'-E_{l}^{(1)} & ... & H_{2f_{l}}'\\
+\dot{:} & \dot{:} & \dot{}\cdot. & \dot{:}\\
+H_{f_{l}1}' & H_{f_{l}2}' & ... & H_{f_{l}f_{l}}'-E_{l}^{(1)}
+\end{array}\right|=0$
+\end_inset
+
+求解, 其中
+\begin_inset Formula $H_{ij}'=\int\phi_{li}^{*}\hat{H}'\phi_{lj}d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+波函数的零级修正: 由
+\begin_inset Formula $\sum\limits_{k=1}^{f_{l}}\left[<\phi_{lm}^{(0)}|\hat{H}'|\phi_{lk}^{(0)}>-E_{l}^{(1)}\delta_{mk}\right]a_{lk}^{(0)}=0,m=1,2,...,f_{l}$
+\end_inset
+
+可以求得
+\begin_inset Formula $\psi_{ln}^{(1)}=\sum\limits_{k=1}^{f_{l}}\phi_{lk}^{(0)}a_{lk}^{n(0)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+是厄米算符, 它与
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+与
+\begin_inset Formula $\hat{H}'$
+\end_inset
+
+都对易(注意: 微扰法中
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+与
+\begin_inset Formula $\hat{H}'$
+\end_inset
+
+不可能对易), 如果
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+的简并本征函数
+\begin_inset Formula $\phi_{a}^{(0)}$
+\end_inset
+
+和
+\begin_inset Formula $\phi_{b}^{(0)}$
+\end_inset
+
+同样也是
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+的具有不同本征值的本征函数, 
+\begin_inset Formula $\hat{A}\phi_{a}^{(0)}=a_{1}\phi_{a}^{(0)},\hat{A}\phi_{b}^{(0)}=a_{2}\phi_{b}^{(0)}$
+\end_inset
+
+, 则
+\begin_inset Formula $H'_{ab}=0$
+\end_inset
+
+.
+ 此时
+\begin_inset Formula $\phi_{a}^{(0)}$
+\end_inset
+
+和
+\begin_inset Formula $\phi_{b}^{(0)}$
+\end_inset
+
+可以用非简并微扰理论;
+\end_layout
+
+\begin_layout Enumerate
+Stack效应: 氢原子在外电场的作用下产生的谱线分裂现象;
+\end_layout
+
+\begin_layout Enumerate
+变分原理: 
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+的平均值取变分极值(
+\begin_inset Formula $\delta E=0$
+\end_inset
+
+)
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+
+\begin_inset Formula $\psi$
+\end_inset
+
+为
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+的本征函数;
+\end_layout
+
+\begin_layout Enumerate
+变分法求基态能量的步骤:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+选取含有参变量
+\begin_inset Formula $\lambda$
+\end_inset
+
+的尝试波函数
+\begin_inset Formula $\phi(\lambda)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+计算平均能量
+\begin_inset Formula $E(\lambda)=<\phi(\lambda)|\hat{H}|\phi(\lambda)>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+取极值
+\begin_inset Formula $\frac{dE(\lambda)}{d\lambda}=0$
+\end_inset
+
+, 求得
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+基态能量
+\begin_inset Formula $E_{0}$
+\end_inset
+
+近似为
+\begin_inset Formula $E(\lambda_{0})$
+\end_inset
+
+, 基态波函数
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+近似为
+\begin_inset Formula $\phi(\lambda_{0})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+含时微扰: 将体系哈密顿算符分解为
+\begin_inset Formula $\hat{H}(t)=\hat{H}^{(0)}+\hat{H}'(t)$
+\end_inset
+
+, 其中
+\begin_inset Formula $\hat{H}^{(0)}$
+\end_inset
+
+与时间无关, 微扰
+\begin_inset Formula $\hat{H}'(t)$
+\end_inset
+
+足够小.
+ 利用方程
+\begin_inset Formula $i\hbar\frac{\partial\psi}{\partial t}=\hat{H}(t)\psi$
+\end_inset
+
+和波函数
+\begin_inset Formula $\Phi_{n}=\phi_{n}e^{-i\frac{\varepsilon_{n}t}{\hbar}}$
+\end_inset
+
+的展开
+\begin_inset Formula $\psi(\vec{r},t)=\sum\limits_{n}c_{n}(t)\Phi_{n}$
+\end_inset
+
+.
+ 其中
+\begin_inset Formula $\varepsilon_{n}\phi_{n}=\hat{H}^{(0)}\phi_{n}$
+\end_inset
+
+求解;
+\end_layout
+
+\end_body
+\end_document

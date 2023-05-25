@@ -1,0 +1,1522 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+表象理论(作业: 20230430)
+\end_layout
+
+\begin_layout Enumerate
+希尔伯特空间: 一个量子体系的所有的可能状态构成的空间, 是由全部状态集合构成的线性空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+内积: 
+\begin_inset Formula $<\Psi|\Psi>=\int|\Psi|^{2}d\tau<\infty$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+施瓦兹不等式: 
+\begin_inset Formula $<\Psi_{1}|\Psi_{2}>^{2}\le<\Psi_{1}|\Psi_{1}><\Psi_{2}|\Psi_{2}>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+算符的矩阵表示: 设算符
+\begin_inset Formula $\hat{F}(x,\hat{p_{x}})$
+\end_inset
+
+作用于波函数
+\begin_inset Formula $\Psi(x,t)$
+\end_inset
+
+后得到另一个函数
+\begin_inset Formula $\Phi(x,t)$
+\end_inset
+
+, 在坐标表象中记为
+\begin_inset Formula $\Phi(x,t)=\hat{F}(x,-i\hbar\frac{\partial}{\partial x})\Psi(x,t)$
+\end_inset
+
+, 设
+\begin_inset Formula $\begin{cases}
+\Psi(x,t)=\sum\limits _{m}a_{m}(t)u_{m}(x)\\
+\Phi(x,t)=\sum\limits _{m}b_{m}(t)u_{m}(x)
+\end{cases}$
+\end_inset
+
+, 定义
+\begin_inset Formula $F_{nm}=\int u_{m}^{*}(x)\hat{F}(x,-i\hbar\frac{\partial}{\partial x})u_{m}(x)dx$
+\end_inset
+
+, 则
+\begin_inset Formula $b_{n}(t)=\sum\limits _{m}F_{nm}a_{m}(t),n=1,2,...$
+\end_inset
+
+, 其中
+\begin_inset Formula $F_{nm}$
+\end_inset
+
+是算符
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+在
+\begin_inset Formula $Q$
+\end_inset
+
+表象中的表示;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+可用矩阵表示: 
+\begin_inset Formula $\left(\begin{array}{c}
+b_{1}(t)\\
+b_{2}(t)\\
+\dot{:}
+\end{array}\right)=\left(\begin{array}{ccc}
+F_{11} & F_{12} & ...\\
+F_{21} & F_{22} & \dot{:}\\
+\dot{:} & \dot{:} & \dot{}\cdot.
+\end{array}\right)\left(\begin{array}{c}
+a_{1}(t)\\
+a_{2}(t)\\
+\dot{:}
+\end{array}\right)$
+\end_inset
+
+, 其中用
+\begin_inset Formula $F$
+\end_inset
+
+表示矩阵
+\begin_inset Formula $F_{ij}$
+\end_inset
+
+, 即
+\begin_inset Formula $\Phi=F\Psi$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+连续谱的矩阵表示: 
+\begin_inset Formula $F_{q'q''}=\int u_{q'}^{*}(x)\hat{F}(x,-i\hbar\frac{\partial}{\partial x})u_{q''}(x)dx$
+\end_inset
+
+, 矩阵元为
+\begin_inset Formula $F_{xx'}=\int\delta(x''-x)\hat{F}(x'',-i\hbar\frac{\partial}{\partial x})\delta(x''-x')dx''=\hat{F}(x,-i\hbar\frac{\partial}{\partial x})\delta(x-x')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+厄米矩阵: 
+\begin_inset Formula $F_{nm}^{*}=F_{nm}$
+\end_inset
+
+, 厄米算符的矩阵都是厄米矩阵;
+\end_layout
+
+\begin_layout Enumerate
+自身表象中的矩阵元: 算符
+\begin_inset Formula $\hat{Q}$
+\end_inset
+
+在自身表象中的矩阵元是
+\begin_inset Formula $Q_{nm}=\int u_{n}^{*}\hat{Q}u_{m}d\tau=Q_{m}\delta_{nm}$
+\end_inset
+
+, 是一个对角矩阵, 它的对角元就是本征值;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+公式的矩阵表达:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+期望: 
+\begin_inset Formula $<F>=\Psi^{\dagger}F\Psi$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+本征方程: 
+\begin_inset Formula $F\Psi=\lambda\Psi$
+\end_inset
+
+, 即
+\begin_inset Formula $(F-\lambda I)\Psi=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+非零解条件: 
+\begin_inset Formula $\det|F-\lambda I|=0$
+\end_inset
+
+, 或
+\begin_inset Formula $\det|F_{mn}-\lambda\delta_{mn}|=0$
+\end_inset
+
+, 称其为久期方程;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+薛定谔方程: 
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi=H\Psi$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+狄拉克符号: 把态和波函数分开, 且让物理量不依赖于表象;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+刃矢: 对波函数
+\begin_inset Formula $\Psi$
+\end_inset
+
+表示的量子状态, 以
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+表示, 称
+\begin_inset Formula $|>$
+\end_inset
+
+为刃矢(或右矢);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+刁矢: 左矢
+\begin_inset Formula $<|=|>^{\dagger}$
+\end_inset
+
+, 波函数
+\begin_inset Formula $\Psi$
+\end_inset
+
+的复共轭
+\begin_inset Formula $\Psi^{*}$
+\end_inset
+
+可以用
+\begin_inset Formula $<\Psi|$
+\end_inset
+
+表示;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+内积: 左右矢表示不同空间的矢量, 不能进行加法运算, 但可以进行内积
+\begin_inset Formula $<\Phi|\Psi>=(\Phi,\Psi)=\int\Phi^{*}\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $<\phi|\Psi>^{*}=<\Psi|\phi>=(\phi,\Psi)^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+正交: 
+\begin_inset Formula $<\phi|\Psi>=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+归一性: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $<\Psi|\Psi>=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+态矢量的狄拉克符号表示: 设
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+的本征方程
+\begin_inset Formula $\hat{F}|n>=f_{n}|n>,<n|n'>=\delta_{nn'}$
+\end_inset
+
+, 则
+\begin_inset Formula $|n>$
+\end_inset
+
+构成
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+表象的希尔伯特空间.
+ 态矢量
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+在基矢
+\begin_inset Formula $|n>$
+\end_inset
+
+上的投影集合
+\begin_inset Formula $\{a_{n}\}=\{<n|\Psi>\}$
+\end_inset
+
+, 其中
+\begin_inset Formula $|n>$
+\end_inset
+
+是希尔伯特空间的基矢
+\begin_inset Formula $|n>=\left(\begin{array}{c}
+\dot{:}\\
+0\\
+1\\
+0\\
+\dot{:}
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+微观的量子态用抽象的态矢
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+描述, 与表象无关.
+ 
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+在某个表象基矢上的投影就是
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+在该表象中的波函数;
+\end_layout
+
+\begin_layout Enumerate
+本征矢量的完备性条件(封闭性): 
+\begin_inset Formula $\sum\limits _{n}|n><n|=1$
+\end_inset
+
+, 或混合谱
+\begin_inset Formula $\sum\limits _{n}|n><n|+\int|q>dq<q|=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+算符用狄拉克符号表示: 设算符
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+作用在右矢
+\begin_inset Formula $|A>$
+\end_inset
+
+上得到右矢
+\begin_inset Formula $|B>$
+\end_inset
+
+, 即
+\begin_inset Formula $|B>=\hat{F}|A>$
+\end_inset
+
+, 利用正交归一化条件
+\begin_inset Formula $\delta_{mn}=<m|n>$
+\end_inset
+
+, 得到
+\begin_inset Formula $<m|B>=\sum\limits _{n}<m|\hat{F}|n><n|A>$
+\end_inset
+
+.
+ 其中
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $<m|\hat{F}|n>$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+称为
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+在
+\begin_inset Formula $Q$
+\end_inset
+
+表象下的矩阵元;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+坐标表象下的矩阵元: 
+\begin_inset Formula $<x'|\hat{F}|x>=|x'><x'|\hat{F}|x><x|=\hat{F}(x',-i\hbar\frac{\partial}{\partial x'})\delta(x-x')$
+\end_inset
+
+, 即
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $<m|\hat{F}|n>=\iint<m|x'>dx'<x'|\hat{F}|x>dx<x|n>=\int<m|x>\hat{F}(x,-i\hbar\frac{\partial}{\partial x})dx<x|n>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $|B>$
+\end_inset
+
+的共轭: 
+\begin_inset Formula $<B|=<A|\hat{F}^{\dagger}$
+\end_inset
+
+, 当
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+是厄米算符时
+\begin_inset Formula $<B|=<A|\hat{F}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+常用量子力学公式的狄拉克符号表示: 右矢用于确定态, 左矢用于确定表象;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+算符: 
+\begin_inset Formula $\hat{F}|\Psi>=|\Phi>$
+\end_inset
+
+, 张量;
+\end_layout
+
+\begin_layout Enumerate
+薛定谔方程: 
+\begin_inset Formula $i\hbar\frac{d}{dt}|\Psi>=\hat{H}|\Psi>$
+\end_inset
+
+, 本征方程;
+\end_layout
+
+\begin_layout Enumerate
+定态薛定谔方程: 
+\begin_inset Formula $\hat{H}|n>=E_{n}|n>$
+\end_inset
+
+, 本征方程;
+\end_layout
+
+\begin_layout Enumerate
+态矢量(波函数): 
+\begin_inset Formula $|\Psi>=\sum\limits _{n}|n><n|\Psi>$
+\end_inset
+
+, 矢量;
+\end_layout
+
+\begin_layout Enumerate
+内积: 
+\begin_inset Formula $<n,\Psi>=\int<n|x>dx<x|\Psi>$
+\end_inset
+
+, 数量;
+\end_layout
+
+\begin_layout Enumerate
+正交: 
+\begin_inset Formula $<n|m>=\delta_{nm}$
+\end_inset
+
+, 数量;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+投影算符: 
+\begin_inset Formula $\hat{P}=|\alpha><\alpha|$
+\end_inset
+
+, 本征值
+\begin_inset Formula $\lambda=1,0$
+\end_inset
+
+;;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{P}^{2}=\hat{P}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{P}(\hat{P}-1)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+本征值
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+对应的本征态为
+\begin_inset Formula $|\alpha>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+本征值
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+对应的本征态为一切与
+\begin_inset Formula $|\alpha>$
+\end_inset
+
+正交的态
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+表象变换: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+基矢变换: 设
+\begin_inset Formula $\{|n>\}$
+\end_inset
+
+和
+\begin_inset Formula $\{|\alpha>\}$
+\end_inset
+
+是态空间的两组不同的基矢, 构成两种不同的表象, 分别记为
+\begin_inset Formula $A$
+\end_inset
+
+和
+\begin_inset Formula $B$
+\end_inset
+
+, 则
+\begin_inset Formula $|\alpha>=\sum\limits _{n}|n><n|\alpha>=\sum\limits _{n}S_{n\alpha}|\alpha>=\sum\limits _{n}(\tilde{S})_{\alpha n}|\alpha>$
+\end_inset
+
+(注意两次转置), 它的矩阵表示为
+\begin_inset Formula $\left(\begin{array}{c}
+\phi_{1}(x)\\
+\dot{:}\\
+\phi_{n}(x)
+\end{array}\right)_{B}=\left(\begin{array}{ccc}
+S_{11} & ... & S_{1n}\\
+\dot{:} & \dot{}\cdot. & \dot{:}\\
+S_{n1} & ... & S_{nn}
+\end{array}\right)\left(\begin{array}{c}
+\psi_{1}(x)\\
+\dot{:}\\
+\psi_{n}(x)
+\end{array}\right)_{A}$
+\end_inset
+
+, 称
+\begin_inset Formula $S=\left(\begin{array}{ccc}
+S_{11} & ... & S_{n1}\\
+\dot{:} & \dot{}\cdot. & \dot{:}\\
+S_{1n} & ... & S_{nn}
+\end{array}\right)$
+\end_inset
+
+(注意下标)为
+\begin_inset Formula $A$
+\end_inset
+
+到
+\begin_inset Formula $B$
+\end_inset
+
+的表象变换矩阵, 基矢变换为
+\begin_inset Formula $\phi_{B}=\tilde{S}\phi_{A},\phi_{A}=\tilde{S}^{-1}\phi_{B}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+表象变换矩阵未必是方阵, 因为不同表象的维数可能不同;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+的厄米共轭矩阵
+\begin_inset Formula $S_{n\alpha}^{\dagger}=<\alpha|n>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+是幺正矩阵: 
+\begin_inset Formula $S^{\dagger}=S^{-1}$
+\end_inset
+
+或
+\begin_inset Formula $S^{\dagger}S^{-1}=I$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+态矢变换: 在
+\begin_inset Formula $A$
+\end_inset
+
+表象中状态
+\begin_inset Formula $|\Psi>$
+\end_inset
+
+是
+\begin_inset Formula $\Psi_{A}=(\{<n|\Psi>\})$
+\end_inset
+
+, 在表象
+\begin_inset Formula $B$
+\end_inset
+
+中
+\begin_inset Formula $\Psi_{B}=(\{<\alpha|\Psi>\})$
+\end_inset
+
+, 则
+\begin_inset Formula $<\alpha|\Psi>=\sum\limits _{n}(\tilde{S^{*}})_{\alpha n}<n|\Psi>$
+\end_inset
+
+, 对应的矩阵
+\begin_inset Formula $\Psi_{B}=S^{\dagger}\Psi_{A}=S^{-1}\Psi_{A}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+算符变换: 在
+\begin_inset Formula $A$
+\end_inset
+
+表象中
+\begin_inset Formula $F_{A}=(\{<n|\hat{F}|m>\})$
+\end_inset
+
+, 在表象
+\begin_inset Formula $B$
+\end_inset
+
+中
+\begin_inset Formula $F_{B}=(\{<\alpha|\hat{F}|\beta>\})$
+\end_inset
+
+, 则
+\begin_inset Formula $<\alpha|\hat{F}|\beta>=\sum\limits _{n}\sum\limits _{m}S_{\alpha n}^{\dagger}F_{nm}S_{m\beta}$
+\end_inset
+
+, 对应的矩阵
+\begin_inset Formula $F_{B}=S^{\dagger}F_{A}S$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+表象变换是幺正变换, 但表象变换未必是厄米变换;
+\end_layout
+
+\begin_layout Enumerate
+幺正变换的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在幺正变换下, 力学量的算符本征值不变;
+\end_layout
+
+\begin_layout Enumerate
+在幺正变换下, 矩阵的迹不变;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+矩阵迹的交换性: 
+\begin_inset Formula $tr(AB)=tr(BA)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $trF_{B}=tr(S^{\dagger}F_{A}S)=tr(F_{A}SS^{\dagger})=trF_{A}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+在幺正变换下, 态矢量的模方和内积均不变;
+\end_layout
+
+\begin_layout Enumerate
+在幺正变换下, 力学量算符的期望值都保持不变;
+\end_layout
+
+\begin_layout Enumerate
+在幺正变换下, 算符的对易关系, 算符方程和量子力学公式的形式不变;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+坐标表象:坐标算符
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+, 本征值
+\begin_inset Formula $x$
+\end_inset
+
+, 本征态
+\begin_inset Formula $|x>$
+\end_inset
+
+, 本征方程
+\begin_inset Formula $\hat{x}|x>=x|x>$
+\end_inset
+
+, 归一完备性条件
+\begin_inset Formula $\begin{cases}
+<x|x'>=\delta(x'-x)\\
+\int|x>dx<x|=I
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+态矢量: 
+\begin_inset Formula $|\Psi>=\int dx|x><x|\Psi>=\int dx|x>\Psi(x)$
+\end_inset
+
+, 
+\begin_inset Formula $<\Psi|=\int<\Psi|x>dx<x|=\int dx\Psi^{*}(x)<x|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+算符: 设
+\begin_inset Formula $|\phi>=\hat{x}|\Psi>$
+\end_inset
+
+, 则
+\begin_inset Formula $<x''|\phi>=<x''|\hat{x}|\Psi>$
+\end_inset
+
+
+\begin_inset Formula $=\int<x''|\hat{x}|x'>dx'<x'|\Psi>$
+\end_inset
+
+
+\begin_inset Formula $=\int x'\delta(x'-x'')dx'<x'|\Psi>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+动量算符: 
+\begin_inset Formula $<x''|\hat{p_{x}}|x'>=\frac{\hbar}{i}\frac{\partial}{\partial x''}\delta(x''-x')$
+\end_inset
+
+, 作用在波函数上
+\begin_inset Formula $<x|\hat{p_{x}}|\Psi>=\frac{\hbar}{i}\frac{\partial}{\partial x}\Psi(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+动量算符的作用规则: 对本征方程
+\begin_inset Formula $\hat{p_{x}}|p_{x}>=p_{x}|p_{x}>$
+\end_inset
+
+, 本征态
+\begin_inset Formula $|p_{x}>$
+\end_inset
+
+在坐标表象中的波函数
+\begin_inset Formula $<x|p_{x}>=\frac{e^{i\frac{p_{x}}{\hbar}x}}{\sqrt{2\pi\hbar}}$
+\end_inset
+
+, 坐标表象中的动量
+\begin_inset Formula $<x|\hat{p_{x}}|p_{x}>=-i\hbar\frac{\partial}{\partial x}<x|p_{x}>$
+\end_inset
+
+, 坐标表象中的动量算符
+\begin_inset Formula $<x|\hat{p_{x}}=-i\hbar\frac{\partial}{\partial x}<x|$
+\end_inset
+
+(厄米共轭后
+\begin_inset Formula $\hat{p_{x}}|x>=i\hbar\frac{\partial}{\partial x}|x>$
+\end_inset
+
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+同理: 
+\begin_inset Formula $\begin{cases}
+<p_{x}|\hat{x}=i\hbar\frac{\partial}{\partial p_{x}}<p_{x}|\\
+\hat{x}|p_{x}>=-i\hbar\frac{\partial}{\partial p_{x}}|p_{x}>
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+期望: 
+\begin_inset Formula $<F>=<\Psi|\hat{F}|\Psi>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+力学量矩阵元: 
+\begin_inset Formula $F_{kn}=<k|\hat{F}|n>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+态矢量在基矢
+\begin_inset Formula $|n>$
+\end_inset
+
+上的展开: 
+\begin_inset Formula $|\Psi>=\sum\limits _{n}c_{n}|n>$
+\end_inset
+
+, 其中
+\begin_inset Formula $c_{n}=<n|\Psi>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+或
+\begin_inset Formula $<\Psi|=\sum\limits _{n}c_{n}^{*}<n|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+利用投影算符
+\begin_inset Formula $\hat{P_{n}}=|n><n|$
+\end_inset
+
+, 则
+\begin_inset Formula $c_{n}^{*}c_{n}=<\hat{P_{n}}>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+离散谱归一化条件: 
+\begin_inset Formula $1=<\Psi|\Psi>=\sum\limits _{n}|c_{n}|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+态矢量内积: 对于
+\begin_inset Formula $|A>=\sum\limits _{n}a_{n}|n>,B=\sum\limits _{n}b_{n}|n>,<A|B>=\sum\limits _{n}a_{n}^{*}b_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量表象: 选
+\begin_inset Formula $\hat{L_{z}}$
+\end_inset
+
+与
+\begin_inset Formula $\hat{L}^{2}$
+\end_inset
+
+的共同本征态
+\begin_inset Formula $|lm>$
+\end_inset
+
+为基矢的表象;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+自身表象: 
+\begin_inset Formula $<l'm'|\hat{L_{z}}|lm>=m\hbar\delta_{l'l}\delta_{m'm}$
+\end_inset
+
+, 
+\begin_inset Formula $<l'm'|\hat{L}^{2}|lm>=l(l+1)\hbar^{2}\delta_{l'l}\delta_{m'm}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量算符: 
+\begin_inset Formula $<l'm'|\hat{L}_{x}|lm>=$
+\end_inset
+
+
+\begin_inset Formula $\frac{\hbar}{2}\left[\sqrt{(l+m+1)(l-m)}\delta_{m',m+1}+\sqrt{(l-m+1)(l+m)}\delta_{m',m-1}\right]\delta_{l'l}$
+\end_inset
+
+, 
+\begin_inset Formula $<l'm'|\hat{L}_{x}|lm>=$
+\end_inset
+
+
+\begin_inset Formula $\frac{i\hbar}{2}\left[-\sqrt{(l+m+1)(l-m)}\delta_{m',m+1}+\sqrt{(l-m+1)(l+m)}\delta_{m',m-1}\right]\delta_{l'l}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{L}_{x}$
+\end_inset
+
+的矩阵元总是
+\begin_inset Formula $0$
+\end_inset
+
+和正实数;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{L}_{y}$
+\end_inset
+
+的矩阵元总是
+\begin_inset Formula $0$
+\end_inset
+
+和纯虚数;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+升降阶算符: 
+\begin_inset Formula $\hat{L_{+}}=\left(\begin{array}{ccc}
+0 & \sqrt{2}\hbar & 0\\
+0 & 0 & \sqrt{2}\hbar\\
+0 & 0 & 0
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{L_{-}}=\left(\begin{array}{ccc}
+0 & 0 & 0\\
+\sqrt{2}\hbar & 0 & 0\\
+0 & \sqrt{2}\hbar & 0
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{L}_{x}=\frac{1}{2}(\hat{L_{+}}+\hat{L}_{-})$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{L}_{y}=\frac{1}{2i}(\hat{L}_{+}-\hat{L}_{-})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+占有数(或粒子数)表象: 以
+\begin_inset Formula $|n>$
+\end_inset
+
+表示
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+对应的本征态, 即以
+\begin_inset Formula $|n>$
+\end_inset
+
+为基矢的表象;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+波色子对易关系: 
+\begin_inset Formula $[\hat{a},\hat{a}^{\dagger}]=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+产生算符(
+\begin_inset Formula $\hat{a}^{\dagger}$
+\end_inset
+
+)和湮灭算符(
+\begin_inset Formula $\hat{a}$
+\end_inset
+
+): 产生湮灭算符满足波色子对易关系, 
+\begin_inset Formula $[\hat{a},\hat{a}^{\dagger}]=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+定义: 
+\begin_inset Formula $[\hat{a},\hat{a}]=[\hat{a}^{\dagger},\hat{a}^{\dagger}]=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{a}|n>=\sqrt{n}|n-1>,\hat{a}^{\dagger}|n>=\sqrt{n+1}|n+1>,\hat{a}|0>=0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+粒子数算符: 
+\begin_inset Formula $N=\hat{a}^{\dagger}\hat{a},\hat{N}|n>=n|n>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+粒子数递推表达式: 
+\begin_inset Formula $|n>=\frac{(a^{\dagger})^{n}}{\sqrt{n!}}|0>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+电子考虑自旋的量子数: 
+\begin_inset Formula $\hat{N}=\hat{a}_{\uparrow}^{\dagger}\hat{a}_{\uparrow}+\hat{a}_{\downarrow}^{\dagger}\hat{a}_{\downarrow}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $[\hat{a},(\hat{a}^{\dagger})^{n}]=n(\hat{a}^{\dagger})^{n-1}$
+\end_inset
+
+或
+\begin_inset Formula $\hat{a}(\hat{a}^{\dagger})^{n}=(\hat{a}^{\dagger})^{n}\hat{a}+n(\hat{a}^{\dagger})^{n-1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+推广: 
+\begin_inset Formula $[\hat{a},f(\hat{a}^{\dagger})]=\frac{\partial f(\hat{a}^{\dagger})}{\partial\hat{a}^{\dagger}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+占有数表象的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+占有数表象的基矢是归一的: 
+\begin_inset Formula $<m|n>=\delta_{mn}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+占有数表象的基矢是完备的, 
+\begin_inset Formula $\sum\limits _{n=0}^{\infty}|n><n|=I$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Fock空间: 通常将这组基矢张成的空间称为Fock空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+占有数表象的矩阵表示: 由
+\begin_inset Formula $<n|n>=<n-1|n-1>$
+\end_inset
+
+, 有
+\begin_inset Formula $n=<n|\hat{a}^{\dagger}\hat{a}|n>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+湮灭算符的矩阵元: 
+\begin_inset Formula $<n-1|\hat{a}|n>=\sqrt{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{a}=\left(\begin{array}{cccc}
+0 & 1 & 0 & 0\\
+0 & 0 & \sqrt{2} & 0\\
+0 & 0 & 0 & \dot{}\cdot.\\
+0 & 0 & 0 & 0
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+产生算符的矩阵元: 
+\begin_inset Formula $<n+1|\hat{a}^{\dagger}|n>=\sqrt{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{a}^{\dagger}=\left(\begin{array}{cccc}
+0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & \sqrt{2} & 0 & 0\\
+0 & 0 & \dot{}\cdot. & 0
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+粒子数矩阵: 
+\begin_inset Formula $N=\left(\begin{array}{cccc}
+0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 2 & 0\\
+0 & 0 & 0 & \dot{}\cdot.
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+哈密顿量: 
+\begin_inset Formula $\hat{H}=\hbar\omega\left(\begin{array}{cccc}
+\frac{1}{2} & 0 & 0 & 0\\
+0 & \frac{3}{2} & 0 & 0\\
+0 & 0 & \frac{5}{2} & 0\\
+0 & 0 & 0 & \dot{}\cdot.
+\end{array}\right)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+占有数表象下的坐标算符: 
+\begin_inset Formula $|x>=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}e^{-\frac{m\omega}{2\hbar}x^{2}+\sqrt{\frac{2m\omega}{\hbar}}x\hat{a}^{\dagger}-\frac{1}{2}(\hat{a}^{\dagger})^{2}}|0>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+占有数表象下的动量算符: 
+\begin_inset Formula $|p>=\left(\frac{1}{\pi\hbar m\omega}\right)^{\frac{1}{4}}e^{-\frac{p^{2}}{2m\hbar\omega}+i\sqrt{\frac{2}{m\hbar\omega}}p\hat{a}^{\dagger}+\frac{1}{2}(\hat{a}^{\dagger})^{2}}|0>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+占有数表象下的波函数: 
+\begin_inset Formula $\psi_{n}(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}e^{-\frac{m\omega}{2\hbar}x^{2}}<0|e^{\sqrt{\frac{2m\omega}{\hbar}}x\hat{a}-\frac{1}{2}\hat{a}^{2}}|0>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+相干态: 在Fock空间中, 相干态定义为
+\begin_inset Formula $|z>=e^{z\hat{a}^{\dagger}-z^{*}\hat{a}}|0>=e^{-\frac{1}{2}|z|^{2}}e^{z\hat{a}^{\dagger}}|0>$
+\end_inset
+
+, 其中
+\begin_inset Formula $z=\alpha+i\beta$
+\end_inset
+
+为任意复常数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+相干态是湮灭算符
+\begin_inset Formula $\hat{a}$
+\end_inset
+
+的本征态;
+\end_layout
+
+\begin_layout Enumerate
+可以利用粒子数本征态
+\begin_inset Formula $|n>$
+\end_inset
+
+表示相干态
+\begin_inset Formula $|z>$
+\end_inset
+
+: 
+\begin_inset Formula $|z>=e^{-\frac{1}{2}|z|^{2}}\sum\limits _{n=0}^{\infty}\frac{z^{n}}{\sqrt{n!}}|n>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+相干态
+\begin_inset Formula $|z>$
+\end_inset
+
+随时间的演化为: 
+\begin_inset Formula $|z(t)>=e^{-i\frac{\hat{H}t}{\hbar}}|z>$
+\end_inset
+
+, 其中
+\begin_inset Formula $\hat{H}=(\hat{a}^{\dagger}\hat{a}+\frac{1}{2})\hbar\omega$
+\end_inset
+
+是谐振子的哈密顿量;
+\end_layout
+
+\begin_layout Enumerate
+相干态中的能量平均值: 
+\begin_inset Formula $<z(t)|\hat{H}|z(t)>=\frac{1}{2}m\omega^{2}x_{0}^{2}+\frac{1}{2}\hbar\omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+相干态具有最小的不确定性: 
+\begin_inset Formula $\Delta x\Delta p=\frac{\hbar}{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+因为
+\begin_inset Formula $\begin{cases}
+\hat{a}=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega\hat{x}+i\hat{p})\\
+\hat{a}|z>=z|z>
+\end{cases}$
+\end_inset
+
+, 所以
+\begin_inset Formula $z=\frac{1}{\sqrt{2m\hbar\omega}}(m\omega<z|\hat{x}|z>+i<z|\hat{p}|z>)$
+\end_inset
+
+.
+ 即相干态的本征值为
+\begin_inset Formula $<\hat{x}>$
+\end_inset
+
+和
+\begin_inset Formula $<\hat{p}>$
+\end_inset
+
+的线性叠加;
+\end_layout
+
+\begin_layout Enumerate
+相干态的波函数: 
+\begin_inset Formula $<x|z>=Ne^{-\frac{m\omega}{2\hbar}x^{2}+\sqrt{\frac{2m\omega}{\hbar}}zx}$
+\end_inset
+
+, 其中归一化系数
+\begin_inset Formula $N=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}e^{-\frac{1}{2}(z^{2}+|z|^{2})}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+不同相干态之间的内积: 
+\begin_inset Formula $<z_{1}|z_{2}>=e^{-\frac{1}{2}(|z_{1}|^{2}+|z_{2}|^{2}-2z_{1}^{*}z_{2})}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+相干态表象: 相干态全体
+\begin_inset Formula $z$
+\end_inset
+
+是完备的, 完备性条件
+\begin_inset Formula $\int\frac{d^{2}z}{\pi}|z><z|=I$
+\end_inset
+
+, 其中
+\begin_inset Formula $z=\alpha+i\beta,d^{2}z=d\alpha d\beta$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+任何物理态均可用相干态的全体来展开;
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,1001 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+波函数和Schrodinger方程(作业: 20230309)
+\end_layout
+
+\begin_layout Enumerate
+波函数的统计解释:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+单色平面物质波(自由粒子): 
+\begin_inset Formula $Ψ=Ae^{i\frac{\vec{p}\cdot\vec{r}-Et}{\hbar}}$
+\end_inset
+
+, 非自由情况
+\begin_inset Formula $\Psi(\vec{r},t)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+波函数的物理意义:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+物质波不是由粒子组成的(单电子衍射实验);
+\end_layout
+
+\begin_layout Enumerate
+微观粒子不是由波构成的;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+波函数的几率诠释: 描写粒子状态的波函数是几率波, 反应在空间某处找到粒子的概率大小, 
+\begin_inset Formula $dW(\vec{r},t)=\left|\Psi(\vec{r},t)\right|{}^{2}d\tau=w(\vec{r},t)d\tau=\Psi^{*}\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $w$
+\end_inset
+
+表示在
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+附近单位体积内找到粒子的概率;
+\end_layout
+
+\begin_layout Enumerate
+波函数也被称为概率幅;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波函数的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+常因子不定性: 波函数乘一个常数, 不改变空间各点找到粒子的概率, 即不改变波函数所描写的状态, 
+\begin_inset Formula $\left|\frac{\Psi(\vec{r_{1}},t)}{\Psi(\vec{r_{2}},t)}\right|^{2}=\left|\frac{C\Psi(\vec{r_{1}},t)}{C\Psi(\vec{r_{2}},t)}\right|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+归一化条件: 
+\begin_inset Formula $\int|\Psi|^{2}d\tau=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若波函数的绝对值的平方在全空间不可积, 则称这样的波函数不对应真实的物理状态;
+\end_layout
+
+\begin_layout Enumerate
+自由粒子的波函数不满足平方可积, 单可归一化为
+\begin_inset Formula $\delta(\vec{x})=\frac{1}{(2\pi\hbar)^{3}}\int_{-\infty}^{\infty}e^{\frac{i}{\hbar}\vec{x}\cdot\vec{r}}d\vec{r}$
+\end_inset
+
+函数.
+ 自由粒子是真实的物理状态, 因此自由粒子不同于平面波;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+相因子不确定性: 
+\begin_inset Formula $|e^{i\delta}\Psi|^{2}=|\Psi|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波函数的标准条件:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有限性: 满足对整个空间的平方可积, 以使波函数可以归一化;
+\end_layout
+
+\begin_layout Enumerate
+单值性: 概率密度(波函数)在空间某一处只能取一个固定值, 即波函数必须是单值函数;
+\end_layout
+
+\begin_layout Enumerate
+连续性: 波函数在整个空间必须是连续性;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+态叠加原理: 若
+\begin_inset Formula $\Psi_{i}$
+\end_inset
+
+是体系的一系列可能状态, 这些态的线性叠加
+\begin_inset Formula $\Psi=\sum_{i}c_{i}\Psi_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+为粒子在动量空间的波函数, 是波函数的傅立叶变换;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+坐标空间的波函数描述粒子
+\begin_inset Formula $t$
+\end_inset
+
+时刻出现在
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+处的概率密度;
+\end_layout
+
+\begin_layout Enumerate
+动量空间的波函数描述粒子
+\begin_inset Formula $t$
+\end_inset
+
+时刻具有动量
+\begin_inset Formula $\vec{p}$
+\end_inset
+
+的概率密度;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Schrodinger方程(波函数随时间变化的规律): 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+方程建立: 注意, Schrodinger方程具有公理性, 这里只是建立该方程, 并非推导;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+由自由粒子的波函数: 
+\begin_inset Formula $\Psi(\vec{r},t)=Ae^{\frac{i}{\hbar}(\vec{p}\cdot\vec{r}-Et)}$
+\end_inset
+
+分别对时间求一阶微分和对时间求二阶微分得:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+\frac{\partial}{\partial t}\Psi=-\frac{i}{\hbar}E\Psi\\
+\frac{\partial^{2}}{\partial x^{2}}\Psi=-\frac{Ap_{x}^{2}}{\hbar^{2}}e^{\frac{i}{\hbar}(\vec{p}\cdot\vec{r}-Et)}=-\frac{p_{x}^{2}}{\hbar^{2}}\Psi & \Rightarrow\vec{\nabla}^{2}\Psi=-\frac{p^{2}}{\hbar^{2}}\Psi
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $E=\frac{p^{2}}{2m}$
+\end_inset
+
+, 得: 
+\begin_inset Formula $i\hbar\frac{\partial\Psi}{\partial t}=-\frac{\hbar^{2}}{2m}\vec{\nabla}^{2}\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+由
+\begin_inset Formula $\begin{cases}
+E\Psi=i\hbar\frac{\partial}{\partial t}\\
+(\vec{p}\cdot\vec{p})\Psi=(-i\hbar\vec{\nabla})\cdot(-i\hbar\vec{\nabla})\Psi
+\end{cases}$
+\end_inset
+
+, 得: 
+\begin_inset Formula $\begin{cases}
+E\to i\hbar\frac{\partial}{\partial t}\\
+\vec{p}\to-i\hbar\vec{\nabla}
+\end{cases}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+由哈密顿方程
+\begin_inset Formula $E=\frac{p^{2}}{2m}+U(\vec{r})$
+\end_inset
+
+, 两边积分得: 
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi=[-\frac{\hbar^{2}}{2m}\vec{\nabla}^{2}+U(\vec{r})]\Psi$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+薛定谔方程: 
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi(\vec{r},t)=[-\frac{\hbar^{2}}{2m}\vec{\nabla}^{2}+U(\vec{r})]\Psi(\vec{r},t)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+一次量子化:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+能量算符: 
+\begin_inset Formula $E\to i\hbar\frac{\partial}{\partial t}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+动量算符: 
+\begin_inset Formula $\vec{p}\to-i\hbar\vec{\nabla}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+哈密顿算符: 
+\begin_inset Formula $\hat{H}=\frac{\hat{p}^{2}}{2m}+U(\vec{r})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi=\hat{H}\Psi$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+薛定谔方程的时间与空间坐标处于不同等地位, 不能满足相对论的协变性.
+ 薛定谔方程是描述微观粒子非相对论性运动的方程;
+\end_layout
+
+\begin_layout Enumerate
+量子力学的基本公设: 经典力学中的力学量在量子力学中用相应的算符表示;
+\end_layout
+
+\begin_layout Enumerate
+薛定谔方程的解不一定是归一化的, 需要归一化;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+归一化保持: 
+\begin_inset Formula $\frac{d}{dt}\int_{\infty}|\Psi|^{2}d\tau=\int_{\infty}\frac{d}{dt}|\Psi|^{2}d\tau=0$
+\end_inset
+
+, 即满足归一化的波函数按照薛定谔方程随时间演化依然满足归一化;
+\end_layout
+
+\begin_layout Enumerate
+几率守恒定律: 
+\begin_inset Formula $\frac{\partial}{\partial t}|\Psi|^{2}+\vec{\nabla}\cdot\vec{J}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+概率流密度矢量: 
+\begin_inset Formula $\vec{J}=\frac{i\hbar}{2m}[\Psi\vec{\nabla}\Psi^{*}-\Psi^{*}\vec{\nabla}\Psi]$
+\end_inset
+
+, 可由归一化保持推出;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+质量守恒定律: 
+\begin_inset Formula $\frac{\partial}{\partial t}\rho_{m}+\vec{\nabla}\cdot\vec{J_{m}}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+质量密度: 
+\begin_inset Formula $\rho_{m}=m|\Psi|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+质量流密度: 
+\begin_inset Formula $\vec{J_{m}}=m\vec{J}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+电荷守恒定律: 
+\begin_inset Formula $\frac{\partial}{\partial t}\rho_{q}+\vec{\nabla}\cdot\vec{J_{q}}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+电荷密度: 
+\begin_inset Formula $\rho_{q}=q|\Psi|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+电流密度: 
+\begin_inset Formula $\vec{J_{q}}=q\vec{J}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+态叠加原理: 薛定谔方程的解可以是多个波函数的线性组合;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+力学量的统计平均值:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+任意物理量算符的期望值: 对于算符
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+, 其期望值为: 
+\begin_inset Formula $<\hat{F}>=\int\Psi^{*}\hat{F}\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+位置期望值: 
+\begin_inset Formula $<\vec{r}>=\int\vec{r}|\Psi(\vec{r},t)|^{2}d\tau=\int\Psi^{*}\vec{r}\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+速度期望值: 
+\begin_inset Formula $<\vec{v}>=\frac{d<\vec{r}>}{dt}=\int\Psi^{*}(\vec{r},t)[-\frac{i\hbar}{m}\vec{\nabla}]\Psi(\vec{r},t)d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+边界条件:波函数在无穷远处应该为
+\begin_inset Formula $0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+动量期望值: 
+\begin_inset Formula $<\vec{p}>=m<\vec{v}>=\int\Psi^{*}[-i\hbar\vec{\nabla}]\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+物理量算符的标准差: 
+\begin_inset Formula $\sigma_{A}=\sqrt{<(\hat{A}-<A>)^{2}>}=\sqrt{<\hat{A}^{2}>-<A>^{2}}$
+\end_inset
+
+, 一般有
+\begin_inset Formula $<\hat{A}^{2}>\ge<A>^{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+定态薛定谔方程:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+本征函数的正交性: 对于本征函数
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+和
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+, 有
+\begin_inset Formula $\int\psi^{*}\psi d\tau=\delta_{mn}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+即本征态是哈密顿量所在希尔伯特空间的完备正交归一的基矢;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+定态薛定谔方程: 哈密顿量不显含时间的薛定谔方程;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+求解: 
+\begin_inset Formula $i\hbar\frac{\partial\Psi(\vec{r},t)}{dt}=\hat{H}\Psi(\vec{r},t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+设: 
+\begin_inset Formula $\Psi(\vec{r},t)=\psi(\vec{r})f(t)$
+\end_inset
+
+, 则方程变为
+\begin_inset Formula $\frac{i\hbar}{f}\frac{\partial f}{\partial t}=\frac{1}{\psi}\hat{H}\psi$
+\end_inset
+
+, 即分离为
+\begin_inset Formula $\begin{cases}
+\frac{i\hbar}{f}\frac{\partial f}{\partial t}=E\\
+\hat{H}\psi=E\psi
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+由态叠加原理, 通解为: 
+\begin_inset Formula $\Psi(\vec{r},t)=\sum\limits _{n=1}^{\infty}c_{n}\psi_{n}(\vec{r})e^{-i\frac{E_{n}t}{\hbar}},n\in\mathbb{N}^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+由本征函数的正交性, 两边乘
+\begin_inset Formula $\psi_{m}$
+\end_inset
+
+并对全空间积分: 
+\begin_inset Formula $c_{m}=\int\psi_{m}^{*}\Psi(\vec{r},0)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+由归一化要求: 
+\begin_inset Formula $\sum\limits _{n=1}^{\infty}|c_{n}|^{2}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+能量的期望值: 
+\begin_inset Formula $<H>=\sum\limits _{n=1}^{\infty}|c_{n}|^{2}E_{n}$
+\end_inset
+
+, 能量不显含时间是能量守恒的体现;
+\end_layout
+
+\begin_layout Enumerate
+力学量算符的期望值: 
+\begin_inset Formula $<\hat{F}>=\sum\limits _{n=1}^{\infty}|c_{n}|^{2}f_{n}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+广义统计诠释: 当粒子处于由波函数描写的状态时, 如果测量粒子的物理量, 所得的结果必然是该物理量算符对应的本征值之一, 测得
+\begin_inset Formula $f_{n}$
+\end_inset
+
+的概率是
+\begin_inset Formula $|c_{n}|^{2}$
+\end_inset
+
+.
+ 这个概率表示任意态坍缩到
+\begin_inset Formula $\Psi_{n}$
+\end_inset
+
+的概率;
+\end_layout
+
+\begin_layout Enumerate
+束缚态与散射态:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+束缚态: 波函数可归一化的物理态, 解可由分立的指标
+\begin_inset Formula $n$
+\end_inset
+
+标记.
+ 即
+\begin_inset Formula $E<\min(V(+\infty),V(-\infty))$
+\end_inset
+
+, 对真实世界
+\begin_inset Formula $E<0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+束缚态的能级是分立的, 其波函数在无限远处为
+\begin_inset Formula $0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+散射态: 波函数不可归一化的物理态(在无穷远处不为
+\begin_inset Formula $0$
+\end_inset
+
+), 解必须使用连续指标
+\begin_inset Formula $k$
+\end_inset
+
+标记.
+ 即
+\begin_inset Formula $E>\min(V(+\infty),V(-\infty))$
+\end_inset
+
+, 对真实世界
+\begin_inset Formula $E>0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+一维无限深方势阱: 
+\begin_inset Formula $V(x)=\begin{cases}
+0 & -a\le x\le a\\
+\infty & x<-a\cup x>a
+\end{cases}$
+\end_inset
+
+, 求解定态薛定谔方程, 其能量满足: 
+\begin_inset Formula $E=\frac{π^{2}n^{2}\hbar^{2}}{2m(2a)^{2}},n\in\mathbb{N}^{+}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+系统的本征态满足: 
+\begin_inset Formula $\psi(\vec{r})=A'\sin\left(\frac{nπ}{2a}(x+a)\right)=\begin{cases}
+A\sin\frac{nπ}{2a}x & n=2,4,6,...,\\
+B\cos\frac{nπ}{2a}x & n=1,3,5,...,
+\end{cases},|x|\le a$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+归一化因子:
+\begin_inset Formula $A'=\frac{1}{\sqrt{a}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+一般解: 
+\begin_inset Formula $\Psi(\vec{r},t)=\sum\limits _{n=1}^{\infty}c_{n}\frac{1}{\sqrt{a}}\sin\left(\frac{nπ}{2a}(x+a)\right)e^{-i\frac{π^{2}n^{2}\hbar}{8ma^{2}}t}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+量子数: 每一个能级的
+\begin_inset Formula $n$
+\end_inset
+
+被称为能量量子数;
+\end_layout
+
+\begin_layout Enumerate
+基态: 体系能量最低的态被称为基态, 在一维无限深方势阱中基态
+\begin_inset Formula $n=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+宇称对称性: 本征函数的
+\begin_inset Formula $n$
+\end_inset
+
+分别取奇数和偶数时, 波函数分别是奇函数和偶函数;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波函数连续条件: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+势函数无限: 波函数连续, 波函数的一阶导数不连续;
+\end_layout
+
+\begin_layout Enumerate
+势函数有限: 波函数连续, 波函数的一阶导数也连续;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+一维
+\begin_inset Formula $\text{\ensuremath{\delta}}$
+\end_inset
+
+势阱: 
+\begin_inset Formula $V(x)=-\alpha\delta(x)$
+\end_inset
+
+, 有唯一束缚态;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+散射问题: 根据概率流密度矢量守恒, 定义透射系数和反射系数求解;
+\end_layout
+
+\begin_layout Enumerate
+一维
+\begin_inset Formula $\delta$
+\end_inset
+
+势垒: 
+\begin_inset Formula $V(x)=\alpha\delta(x-a),a>0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+一维有限深方势阱: 
+\begin_inset Formula $V(x)=\begin{cases}
+-V_{0} & |x|<a\\
+0 & |a|\ge a
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+共振透射: 在一维有限高方势垒中, 粒子的波长
+\begin_inset Formula $\lambda=\frac{2\pi}{k_{2}}=\frac{h}{\sqrt{2m(E-V_{0})}}$
+\end_inset
+
+时, 粒子完全透射而不被势垒反射;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+物理系统的对称性: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+奇宇称: 
+\begin_inset Formula $\psi(-x)=-\psi(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+偶宇称: 
+\begin_inset Formula $\psi(-x)=\psi(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+对于波函数和算符都可能有对称性;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+具有偶宇称势能的系统, 具有偶宇称的哈密顿量;
+\end_layout
+
+\begin_layout Enumerate
+对于奇宇称势能的系统, 系统哈密顿量的宇称不确定;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+定态的基本性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果
+\begin_inset Formula $\psi=\psi_{1}+\psi_{2}$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+都是实函数, 是定态薛定谔方程对应的能量本征值为
+\begin_inset Formula $E$
+\end_inset
+
+的解, 则
+\begin_inset Formula $\psi$
+\end_inset
+
+的实部和虚部都是方程的解;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+必要时(对于厄米的条件), 可以全部选择实函数作为定态薛定谔方程的解;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对于一维定态薛定谔方程, 如果
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\psi_{1}$
+\end_inset
+
+和
+\begin_inset Formula $\psi_{2}$
+\end_inset
+
+是对应某个能量本征值为E的两个线性无关解(简并态), 则它们的朗斯基行列式满足
+\begin_inset Formula $\left|\begin{array}{cc}
+\psi_{1} & \psi_{2}\\
+\psi_{1}' & \psi_{2}'
+\end{array}\right|=\psi_{1}\psi_{2}'-\psi_{2}\psi_{1}'=constant$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+对于一维定态薛定谔方程, 与任何一个能量本征值相应的线性独立解最多有两个, 即每个能级最多有两个简并态;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对于确定的能级, 一维系统的简并度最多为
+\begin_inset Formula $2$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对于一维束缚态, 所有能级都是非简并的, 而且波函数是实数;
+\end_layout
+
+\begin_layout Enumerate
+对于一维束缚定态, 如果势能算符为偶宇称, 即哈密顿量为偶函数, 则每一个能量本征态
+\begin_inset Formula $\psi_{E}(x)$
+\end_inset
+
+都有确定的宇称性;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+置换算符: 
+\begin_inset Formula $\hat{P}$
+\end_inset
+
+使
+\begin_inset Formula $\hat{P}_{ij}\psi(x_{j},x_{i})=\psi(x_{i},x_{j})$
+\end_inset
+
+, 且
+\begin_inset Formula $\hat{P}_{ij}^{2}=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

@@ -1,0 +1,457 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+自旋与全同性原理(作业: 20230528)
+\end_layout
+
+\begin_layout Enumerate
+自旋: 粒子的一个内禀自由度;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+电子的自旋: 
+\begin_inset Formula $s_{z}=\pm\frac{\hbar}{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波色子与费米子: 自旋为整数的粒子称为波色子, 半整数为费米子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+波色子可以处于同一状态, 费米子则遵从泡利不相容原理;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+电子的波函数: 有两个自旋方向, 表示为
+\begin_inset Formula $\Psi=\left(\begin{array}{c}
+\Psi_{1}\\
+\Psi_{2}
+\end{array}\right)$
+\end_inset
+
+(或记为
+\begin_inset Formula $\Psi(x,y,z,s_{z})=\Psi(x,y,z)\chi(s_{z})$
+\end_inset
+
+), 归一化条件
+\begin_inset Formula $\int(|\Psi_{1}|^{2}+|\Psi_{2}|^{2})d\tau$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Enumerate
+自旋算符: 
+\begin_inset Formula $\hat{S}^{2}=\hat{S}_{x}^{2}+\hat{S}_{y}^{2}+\hat{S}_{z}^{2}=3\times\frac{\hbar^{2}}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{S_{z}}=\frac{\hbar}{2}\left(\begin{array}{cc}
+1 & 0\\
+0 & -1
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{S_{x}}=\frac{\hbar}{2}\left(\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{S_{y}}=\frac{\hbar}{2}\left(\begin{array}{cc}
+0 & -i\\
+i & 0
+\end{array}\right)$
+\end_inset
+
+; 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+自旋算符的对易关系: 自旋算符满足对易关系
+\begin_inset Formula $[\hat{S_{x}},\hat{S_{y}}]=i\hbar\hat{S}_{z}$
+\end_inset
+
+(其他方向同理), 也满足反对易关系
+\begin_inset Formula $\{\hat{S}_{x},\hat{S_{y}}\}=\hat{S_{x}}\hat{S_{y}}+\hat{S_{y}}\hat{S}_{x}=0$
+\end_inset
+
+(其他方向同理);
+\end_layout
+
+\begin_layout Enumerate
+自旋算符的本征态: 
+\begin_inset Formula $\hat{S}^{2}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{S_{z}}$
+\end_inset
+
+分别记为
+\begin_inset Formula $|\uparrow>=|\frac{1}{2},\frac{1}{2}>$
+\end_inset
+
+和
+\begin_inset Formula $|\downarrow>=|\frac{1}{2},-\frac{1}{2}>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+自旋翻转算子: 
+\begin_inset Formula $\hat{S}_{\pm}=\hat{S_{x}}\pm i\hat{S_{y}}$
+\end_inset
+
+, 其作用
+\begin_inset Formula $\begin{cases}
+\hat{S}_{+}|s,s_{z}>=\sqrt{s(s+1)-s_{z}(s_{z}+1)}\hbar|s,s_{z}+1>\\
+\hat{S}_{-}|s,s_{z}>=\sqrt{s(s+1)-s_{z}(s_{z}-1)}\hbar|s,s_{z}-1>
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+泡利矩阵: 
+\begin_inset Formula $\vec{S}=(\hat{S_{x}},\hat{S_{y}},\hat{S_{z}})=\frac{\hbar}{2}\vec{\sigma}$
+\end_inset
+
+, 仿照升降阶算符
+\begin_inset Formula $\begin{cases}
+\hat{\sigma}^{+}=\frac{1}{2}(\hat{\sigma_{x}}+i\hat{\sigma_{y}})=\left(\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right)\\
+\hat{\sigma^{-}}=\frac{1}{2}(\hat{\sigma_{x}}-i\hat{\sigma_{y}})=\left(\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right)
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量叠加: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+无耦合表象: 两个要叠加的自旋角动量完备集
+\begin_inset Formula $\{\hat{J_{1}^{2}},\hat{J_{1z}},\hat{J_{2}^{2}},\hat{J_{2z}}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+本征值与本征矢: 
+\begin_inset Formula $\hat{J}_{1}^{2}|j_{1},m_{1}>=j_{1}(j_{1}+1)\hbar^{2}|j_{1},m_{1}>$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}_{1z}|j_{1},m_{1}>=m_{1}\hbar|j_{1},m_{1}>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+自旋量子数: 
+\begin_inset Formula $j_{max}=j_{1}+j_{2}$
+\end_inset
+
+, 由基矢数目
+\begin_inset Formula $(2j_{1}+1)(2j_{2}+1)=\sum\limits _{j_{min}}^{j_{max}}(2j+1)$
+\end_inset
+
+
+\begin_inset Formula $=\frac{(2j_{max}+1)+(2j_{min}+1)}{2}(j_{max}-j_{min}+1)$
+\end_inset
+
+
+\begin_inset Formula $=j_{max}(2+j_{max})-(j_{min}^{2}-1)$
+\end_inset
+
+得
+\begin_inset Formula $j_{min}=|j_{1}-j_{2}|$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+有耦合表象: 引入总自旋角动量的完备集
+\begin_inset Formula $\{\hat{J}^{2},\hat{\vec{J}}_{z},\hat{J}_{1}^{2},\hat{J}_{2}^{2}\}$
+\end_inset
+
+(其中
+\begin_inset Formula $\hat{J}^{2}=(\hat{\vec{J}}_{1}+\hat{\vec{J}}_{2})^{2}=\hat{J}_{1}^{2}+\hat{J}_{2}^{2}+2\hat{\vec{J}_{1}}\cdot\hat{\vec{J}_{2}}$
+\end_inset
+
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+本征值: 
+\begin_inset Formula $\hat{J}^{2}|j,m,j_{1},j_{2}>=j(j+1)\hbar^{2}|j,m,j_{1},j_{2}>$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}_{z}|j,m,j_{1},j_{2}>=m\hbar|j,m,j_{1},j_{2}>$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}_{1}^{2}|j,m,j_{1},j_{2}>=j_{1}(j_{1}+1)\hbar^{2}|j,m,j_{1},j_{2}>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+本征矢: 
+\begin_inset Formula $|j,m,j_{1},j_{2}>=\sum\limits _{m_{1}}\sum\limits _{m_{2}}|j_{1},m_{1},j_{2},m_{2}><j_{1},m_{1},j_{2},m_{2}|j,m,j_{1},j_{2}>$
+\end_inset
+
+, 其中
+\begin_inset Formula $<j_{1},m_{1},j_{2},m_{2}|j,m,j_{1},j_{2}>$
+\end_inset
+
+被称为克莱布希-高登(CG)系数(矢量耦合系数), 另外
+\begin_inset Formula $m_{1},m_{2}$
+\end_inset
+
+不独立有
+\begin_inset Formula $m_{1}=m-m_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+磁量子数: 
+\begin_inset Formula $m=m_{1}+m_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+自旋量子数可能的取值: 
+\begin_inset Formula $j_{1}+j_{2},j_{1}+j_{2}-1,...,|j_{1}-j_{2}|$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+自旋-自旋耦合: 设自旋
+\begin_inset Formula $\vec{S}_{1},\vec{S_{2}}$
+\end_inset
+
+是两个电子的自旋, 它们耦合的总角动量
+\begin_inset Formula $\vec{S}=\vec{S_{1}}+\vec{S}_{2},\hat{S}_{\alpha}=\hat{S}_{1\alpha}+\hat{S}_{2\alpha}$
+\end_inset
+
+, 且
+\begin_inset Formula $\hat{\vec{S}}\times\hat{\vec{S}}=i\hbar\hat{\vec{S}},[\vec{S}^{2},\vec{S}_{\alpha}]=0,\alpha\in\{x,y,z\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对电子而言
+\begin_inset Formula $j_{1}=j_{2}=\frac{1}{2}$
+\end_inset
+
+, 耦合表象表示为
+\begin_inset Formula $|j,m>$
+\end_inset
+
+, 无耦合表象表示为
+\begin_inset Formula $|m_{1},m_{2}>$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+自旋-轨道耦合: 设电子的总角动量为
+\begin_inset Formula $\vec{J}$
+\end_inset
+
+, 自旋角动量为
+\begin_inset Formula $\vec{S}$
+\end_inset
+
+, 轨道角动量为
+\begin_inset Formula $\vec{L}$
+\end_inset
+
+, 则
+\begin_inset Formula $\vec{J}=\vec{S}+\vec{L}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{J}^{2}=\hat{L}^{2}+\hat{S}^{2}+\hbar\hat{\vec{\sigma}}\cdot\hat{\vec{L}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对电子而言
+\begin_inset Formula $\hat{S}^{2}=\frac{3}{4}\hbar^{2}$
+\end_inset
+
+, 则耦合力学量完全集表示为
+\begin_inset Formula $\{\hat{J^{2}},\hat{J_{z}},\hat{L}^{2}\}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+塞曼效应: 原子被置于均匀外磁场
+\begin_inset Formula $\vec{B_{e}}$
+\end_inset
+
+中时, 能级分裂的现象;
+\end_layout
+
+\begin_layout Enumerate
+全同粒子: 固有性质完全相同的微观粒子, 如所有的电子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+可区分的全同粒子: 两个粒子的波函数在空间完全不重叠;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+全同性原理: 在全同粒子组成的体系中, 两个全同粒子的相互代换不引起物理状态的改变;
+\end_layout
+
+\begin_layout Enumerate
+费米子: 自旋为半奇数, 体系波函数是交换反对称的;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+泡利不相容原理: 同一体系中的两个全同费米子不能处于同样的状态;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波色子: 自旋为零或正整数, 体系波函数是交换对称的;
+\end_layout
+
+\begin_layout Enumerate
+朗道能级: 电子在匀强磁场中运动时所处的能级;
+\end_layout
+
+\end_body
+\end_document

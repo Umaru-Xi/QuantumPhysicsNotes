@@ -1,0 +1,649 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+一维问题(作业: 20230324)
+\end_layout
+
+\begin_layout Enumerate
+高斯积分: 
+\begin_inset Formula $\int e^{-x^{2}}dx=\sqrt{\pi}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+厄米共轭: 算符
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+的厄米共轭算符
+\begin_inset Formula $\hat{A}^{\dagger}$
+\end_inset
+
+定义为
+\begin_inset Formula $\int(\hat{A}^{\dagger}f)^{*}gdx=\int f^{*}\hat{A}gdx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+厄米多项式: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+厄米多项式可由母函数
+\begin_inset Formula $e^{-\xi^{2}}$
+\end_inset
+
+生成, 
+\begin_inset Formula $H_{n}(\xi)=(-1)^{n}e^{\xi^{2}}\frac{d^{n}}{d\xi^{n}}e^{-\xi^{2}}=\sum\limits _{k=0}^{\left[\frac{n}{2}\right]}\frac{(-1)^{k}n!}{k!(-2k)!}(2\xi)^{n-2k}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+在力学量期望值时, 有以下递推公式: 
+\begin_inset Formula $\frac{dH_{n}}{d\xi}=2nH_{n-1}$
+\end_inset
+
+, 
+\begin_inset Formula $H_{n+1}-2\xi H_{n}+2nH_{n-1}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+厄米多项式最高幂次为
+\begin_inset Formula $n$
+\end_inset
+
+, 最高幂次项的系数为
+\begin_inset Formula $2n$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+厄米多项式的正交归一性: 
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-\xi^{2}}H_{m}(\xi)H_{n}(\xi)d\xi=\begin{cases}
+0 & m\neq n\\
+2^{n}n!\sqrt{\pi} & m=n
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+产生湮灭算符: 
+\begin_inset Formula $\hat{a}_{\pm}=\frac{1}{\sqrt{2\hbar m\omega}}(\mp i\hat{p}+m\omega\hat{x})$
+\end_inset
+
+, 产生湮灭算符是一对厄米共轭算符;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+产生湮灭算符的作用: 
+\begin_inset Formula $\hat{a}_{+}\psi_{n}=\sqrt{n+1}\psi_{n+1}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{a}_{-}\psi_{n}=\sqrt{n}\psi_{n-1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+粒子数算符: 
+\begin_inset Formula $\hat{n}=\hat{a_{+}}\hat{a}_{-}$
+\end_inset
+
+, 
+\begin_inset Formula $\hbar\omega(\hat{a}_{\pm}\hat{a}_{\mp}\pm\frac{1}{2})\psi_{n}=E_{n}\psi_{n}=(n+1)\hbar\omega\psi_{n}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对易式: 
+\begin_inset Formula $[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+正则对易关系: 
+\begin_inset Formula $[\hat{a}_{-},\hat{a}_{+}]=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+如果波函数
+\begin_inset Formula $\psi$
+\end_inset
+
+能满足能量为
+\begin_inset Formula $E$
+\end_inset
+
+的薛定谔方程, 则
+\begin_inset Formula $\hat{a}_{+}\psi$
+\end_inset
+
+满足能量为
+\begin_inset Formula $E+\hbar\omega$
+\end_inset
+
+的薛定谔方程
+\begin_inset Formula $(E+\hbar\omega)(\hat{a}_{+}\psi)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+测不准关系: 
+\begin_inset Formula $[\hat{x},\hat{p}]=i\hbar$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+一维谐振子: 势函数
+\begin_inset Formula $V(x)=\frac{1}{2}\omega^{2}x^{2}$
+\end_inset
+
+, 波函数
+\begin_inset Formula $\psi_{n}(\xi)=\sqrt{\frac{\alpha}{\sqrt{\pi}2^{n}n!}}e^{-\frac{\xi^{2}}{2}}H_{n}(\xi)$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=\sqrt{\frac{m\omega}{\hbar}}x=\alpha x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+谐振子哈密顿量的二次量子化形式: 
+\begin_inset Formula $\hat{H}=\hbar\omega(\hat{a}_{-}\hat{a}_{+}-\frac{1}{2})=\hbar\omega(\hat{a}_{+}\hat{a}_{-}+\frac{1}{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+最低能量
+\begin_inset Formula $\hat{a}^{-}\psi_{0}=0$
+\end_inset
+
+: 
+\begin_inset Formula $\psi_{0}(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}e^{-\frac{m\omega}{2\hbar}x^{2}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+谐振子零点能: 
+\begin_inset Formula $E_{0}=\frac{1}{2}\hbar\omega$
+\end_inset
+
+, 是量子力学中所特有的纯量子现象;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+激发过程: 
+\begin_inset Formula $\psi_{n}(x)=A_{n}(\hat{a}^{\dagger})^{n}\psi_{0}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $E_{n}=(n+\frac{1}{2})\hbar\omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+谐振子能级差: 
+\begin_inset Formula $\frac{1}{2}\hbar\omega$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+半谐振子: 势函数
+\begin_inset Formula $V(x)=\begin{cases}
+\infty & x<0\\
+\frac{1}{2}m\omega^{2}x^{2} & x>0
+\end{cases},$
+\end_inset
+
+ 波函数
+\begin_inset Formula $\psi_{n}(\xi)=\begin{cases}
+0 & x<0\\
+\sqrt{\frac{\alpha}{\sqrt{\pi}2^{2n}(2n+1)!}}e^{-\frac{\xi^{2}}{2}}H_{2n+1}(\xi) & x>0
+\end{cases}$
+\end_inset
+
+, 基态能量及能级差
+\begin_inset Formula $\frac{3}{2}\hbar\omega$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+三维谐振子: 哈密顿算符
+\begin_inset Formula $\hat{H}=-\frac{\hbar^{2}}{2m}\vec{\nabla}^{2}+\frac{1}{2}m\omega^{2}|\vec{r}|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果哈密顿量可以写为
+\begin_inset Formula $\hat{H}_{x}+\hat{H}_{y}+\hat{H}_{z}$
+\end_inset
+
+, 则
+\begin_inset Formula $\psi(x,y,z)=\psi(x)\psi(y)\psi(z)$
+\end_inset
+
+, 
+\begin_inset Formula $E=E_{x}+E_{y}+E_{z}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\delta$
+\end_inset
+
+函数与傅立叶变换的关系: 
+\begin_inset Formula $\delta(x)=\int_{-\infty}^{\infty}e^{ikx}dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+自由粒子: 定态薛定谔方程
+\begin_inset Formula $-\frac{\hbar^{2}}{2m}\frac{d^{2}\psi}{dx^{2}}=E\psi$
+\end_inset
+
+, 自由粒子的波函数不是平面波, 而是多个平面波的叠加;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+误解: 设
+\begin_inset Formula $k=\frac{\sqrt{2mE}}{\hbar}$
+\end_inset
+
+, 解得本征函数
+\begin_inset Formula $\psi(x)=Ae^{ikx}+Be^{-ikx}$
+\end_inset
+
+.
+ 加入时间指数因子得到定态波函数
+\begin_inset Formula $\psi_{k}(x,t)=Ae^{ik(x-\frac{\hbar k}{2m}t)}+Be^{-ik(x+\frac{\hbar k}{2m}t)}$
+\end_inset
+
+; 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+这个波函数不可归一化, 即单个平面波不是自由微观粒子的真实状态, 在量子力学中不存在一个自由粒子具有确定能量或动量的事实;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+自由粒子的归一化条件: 
+\begin_inset Formula $\delta(k-k')=\int_{-\infty}^{\infty}\psi_{k'}^{*}\psi_{k}dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+自由粒子含时薛定谔方程的通解可以分解为定态的叠加: 
+\begin_inset Formula $\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}c(k)e^{i(kx-\frac{E_{k}t}{\hbar})}dk$
+\end_inset
+
+.
+ 为了避免波包弥散到全空间, 因此
+\begin_inset Formula $k$
+\end_inset
+
+的范围有限;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若假设
+\begin_inset Formula $k$
+\end_inset
+
+只在
+\begin_inset Formula $k_{0}$
+\end_inset
+
+附近非零, 对色散关系(
+\begin_inset Formula $\omega$
+\end_inset
+
+对
+\begin_inset Formula $k$
+\end_inset
+
+的关系)展开到一次项
+\begin_inset Formula $\omega(k)\approx\omega_{0}+\omega'_{0}(k-k_{0})$
+\end_inset
+
+, 对积分变换
+\begin_inset Formula $s=k-k_{0}$
+\end_inset
+
+, 在
+\begin_inset Formula $t=0$
+\end_inset
+
+时可消去不确定项得到
+\begin_inset Formula $\psi(x,0)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}c(s+k_{0})e^{i(s+k_{0})x}ds$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+对比
+\begin_inset Formula $t\neq0$
+\end_inset
+
+的情况, 得到
+\begin_inset Formula $\psi(x,t)\approx e^{i(-\omega_{0}+k_{o}\omega'_{0})t}\psi(x-\omega'_{0}t,0)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+自由粒子波包的群速度: 由
+\begin_inset Formula $\omega=\frac{E_{k}}{\hbar}=\frac{\hbar k^{2}}{2m}$
+\end_inset
+
+, 群速度就是经典速度
+\begin_inset Formula $v_{\texttt{group }}=\frac{d\omega}{dk}=\frac{\hbar k}{m}$
+\end_inset
+
+, 相速度
+\begin_inset Formula $v_{\texttt{phase}}=\frac{\omega}{k}=\frac{\hbar k}{2m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+群速度是相速度的一半, 自由粒子的经典速度是自由粒子波包的群速度;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+真实的归一化因子: 
+\begin_inset Formula $c(k)=\int_{-\infty}^{\infty}\frac{e^{-ikx}}{\sqrt{2\pi}}\psi(x,0)dx$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+周期场: 周期场的特征
+\begin_inset Formula $V(x+na)=V(x),n=1,2,...,n$
+\end_inset
+
+, 定态薛定谔方程
+\begin_inset Formula $\frac{d^{2}\psi(x)}{dx^{2}}+\frac{2m}{\hbar^{2}}(E-V(x))\psi(x)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对薛定谔方程进行变换
+\begin_inset Formula $x\to x+a$
+\end_inset
+
+, 得到
+\begin_inset Formula $\frac{d^{2}\psi(x+a)}{dx^{2}}+\frac{2m}{\hbar^{2}}(E-V(x))\psi(x+a)=0$
+\end_inset
+
+, 则
+\begin_inset Formula $\psi(x)$
+\end_inset
+
+和
+\begin_inset Formula $\psi(x+a)$
+\end_inset
+
+都是对应能量
+\begin_inset Formula $E$
+\end_inset
+
+的解;
+\end_layout
+
+\begin_layout Enumerate
+Floquet定理: 在周期势场中, 给定能量
+\begin_inset Formula $E$
+\end_inset
+
+, 则薛定谔方程存在这样的解满足
+\begin_inset Formula $\psi(x+a)=\lambda\psi(x)$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+为常数.
+ 即波函数具有准周期性;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+由波函数的标准条件, 
+\begin_inset Formula $|\lambda|=1,$
+\end_inset
+
+ 
+\begin_inset Formula $\lambda=e^{iKa},K\in\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+为晶格常数(限制Bloch波数
+\begin_inset Formula $K$
+\end_inset
+
+在第一布里渊区
+\begin_inset Formula $-\pi\le Ka\le\pi$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Enumerate
+一维系统的简并度为
+\begin_inset Formula $2$
+\end_inset
+
+, 则
+\begin_inset Formula $u_{i}(x+a)=\sum\limits _{ij}^{2}c_{ji}u_{j}(x)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bloch定理: 周期场中粒子的本征函数总可以表示为
+\begin_inset Formula $\psi(x)=e^{-iKx}\phi_{k}(x)$
+\end_inset
+
+.
+ 其中
+\begin_inset Formula $\phi_{k}(x)$
+\end_inset
+
+是周期函数, 周期与周期场相同
+\begin_inset Formula $\phi_{k}(x+a)=\phi_{k}(x)$
+\end_inset
+
+, 
+\begin_inset Formula $K$
+\end_inset
+
+是Bloch常数(为实常数);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+狄拉克梳: 势场
+\begin_inset Formula $V(x)=\alpha\sum\limits _{j=0}^{N-1}\delta(x-ja)$
+\end_inset
+
+, 能谱方程
+\begin_inset Formula $\cos(Kx)=\cos(ka)+\frac{m\alpha}{\hbar^{2}k}\sin(ka)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对于宏观物体, 可以采用周期性边界条件
+\begin_inset Formula $\psi(x+Na)=\psi(x)$
+\end_inset
+
+, 其中
+\begin_inset Formula $N\approx10^{23}$
+\end_inset
+
+为阿伏加德罗常数;
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

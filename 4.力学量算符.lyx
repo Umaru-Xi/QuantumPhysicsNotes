@@ -1,0 +1,1210 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+力学量算符(作业: 20230408)
+\end_layout
+
+\begin_layout Enumerate
+算符: 作用在一个函数上得出另一个函数的运算符号.
+ 设某种运算把函数
+\begin_inset Formula $u$
+\end_inset
+
+变成
+\begin_inset Formula $v$
+\end_inset
+
+, 用符号表示为
+\begin_inset Formula $\hat{F}u=v$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+算符相等: 
+\begin_inset Formula $\hat{F}u=\hat{G}u$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $\hat{F}=\hat{G}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+算符的性质参考半群的性质或矩阵的性质;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+逆算符: 
+\begin_inset Formula $(\hat{F}\hat{G})^{-1}=\hat{G}^{-1}\hat{F}^{-1}$
+\end_inset
+
+, 有的算符没有逆算符(左右逆元不相等, 需要与群区分);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+算符的内积(标量积): 
+\begin_inset Formula $(u,v)=<u|v>=\int u^{*}vd\tau=(\int uv^{*}d\tau)^{*}=(v,u)^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+算符的内积满足双线性: 
+\begin_inset Formula $\begin{cases}
+(u,c_{1}v_{1}+c_{2}v_{2})=c_{1}(u,v_{1})+c_{2}(u,v_{2})\\
+(c_{1}u_{1}+c_{2}u_{2},v)=c_{1}^{*}(u_{1},v)+c_{2}^{*}(u_{2},v)
+\end{cases}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+复共轭算符: 
+\begin_inset Formula $\hat{F}^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $(\hat{F}\hat{G})^{*}=\hat{F}^{*}\hat{G}^{*}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+转置算符: 
+\begin_inset Formula $\tilde{\hat{F}}$
+\end_inset
+
+, 定义为
+\begin_inset Formula $\int u^{*}\hat{F}vd\tau=\int\tilde{\hat{F}}u^{*}vd\tau$
+\end_inset
+
+或
+\begin_inset Formula $(u,\tilde{\hat{F}}v)=(v^{*},\hat{F}u^{*})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\frac{\tilde{\partial}}{\partial x}=-\frac{\partial}{\partial x}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\widetilde{\hat{F}\hat{G}}=\tilde{\hat{G}}\tilde{\hat{F}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+厄米共轭算符: 
+\begin_inset Formula $\hat{F}^{\dagger}$
+\end_inset
+
+, 定义为
+\begin_inset Formula $\int u^{*}\hat{F}vd\tau=\int(\hat{F}^{\dagger}u)^{*}vd\tau$
+\end_inset
+
+或
+\begin_inset Formula $(u,\hat{F}^{\dagger}v)=(\hat{F}u,v)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{F}^{\dagger}=\tilde{\hat{F}}^{*}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\hat{F}\hat{G})^{\dagger}=\hat{G}^{\dagger}\hat{F}^{\dagger}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+线性算符: 若
+\begin_inset Formula $\hat{F}(c_{1}u_{1}+c_{2}u_{2})=c_{1}\hat{F}u_{1}+c_{2}\hat{F}u_{2}$
+\end_inset
+
+, 则称
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+是线性算符;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对易关系判别式: 
+\begin_inset Formula $[\hat{F},\hat{G}]=\hat{F}\hat{G}-\hat{G}\hat{F}$
+\end_inset
+
+, 算符对易时 
+\begin_inset Formula $[\hat{F},\hat{G}]=0$
+\end_inset
+
+.
+ 对易关系没有传递性; 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+反对易判别式: 
+\begin_inset Formula $\{\hat{F},\hat{G}\}=\hat{F}\hat{G}+\hat{G}\hat{F}=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+波色子算符满足对易关系, 费米子算符满足反对易关系;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+算符的函数: 
+\begin_inset Formula $F(\hat{A})=\sum\limits _{n=1}^{\infty}\frac{f^{(n)}(0)}{n!}\hat{A}^{n}$
+\end_inset
+
+, 或
+\begin_inset Formula $F(\hat{A},\hat{B})=\sum\limits _{n,m=0}^{\infty}\frac{f^{(n,m)}(0,0)}{n!m!}\hat{A}^{n}\hat{B}^{m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+厄米算符: 
+\begin_inset Formula $\hat{F}^{\dagger}=\hat{F}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+两个厄米算符的和仍然是一个厄米算符;
+\end_layout
+
+\begin_layout Enumerate
+厄米算符的幂也是厄米算符;
+\end_layout
+
+\begin_layout Enumerate
+两个对易算符的积是厄米算符;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+力学量的算符: 表示力学量算符都是厄米算符(量子力学第二基本假定第一点);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+力学量的算符应该满足态叠加原理, 因此必须为一个线性算符;
+\end_layout
+
+\begin_layout Enumerate
+力学量算符的测量可能值必须是实数, 即期望值也必须是一个实数, 应该满足
+\begin_inset Formula $<F>=<F>^{*}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+厄米算符的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+厄米算符的本征值是一个实数;
+\end_layout
+
+\begin_layout Enumerate
+厄米算符的期望值是一个实数;
+\end_layout
+
+\begin_layout Enumerate
+一个厄米算符属于不同本征值的本征函数相互正交; 属于同一本征值而线性无关的本征态可以相互正交;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+简并态的正交归一化常用方法: 施密特正交化;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+一个厄米算符的本征函数系是完备的;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+完备: 任意波函数都可以用这个厄米算符的线性叠加表示;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+广义统计诠释:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+广义统计诠释: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+离散谱的广义统计诠释:如果测量一个处于
+\begin_inset Formula $\Psi(\vec{r},t)$
+\end_inset
+
+态的粒子的可观测量
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+, 那么其结果一定是厄米算符
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+的本征值中的一个, 得到本征函数
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+对应的本征值
+\begin_inset Formula $f_{n}$
+\end_inset
+
+的概率是
+\begin_inset Formula $|c_{n}(t)|^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $c_{n}(t)=\int\psi_{n}^{*}(\vec{r})\Psi(\vec{r},t)d\tau$
+\end_inset
+
+.
+ 测量之后, 波函数
+\begin_inset Formula $\Psi(\vec{r},t)$
+\end_inset
+
+坍缩到对应的本征态
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+上;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+因为
+\begin_inset Formula $|c_{n}(t)|^{2}$
+\end_inset
+
+具有概率的意义, 所以
+\begin_inset Formula $\sum\limits _{n}|c_{n}(t)|^{2}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+的期望值应该是任何可能本征值与本征值出现概率乘积的求和: 
+\begin_inset Formula $<F>=\sum\limits _{n}|c_{n}|^{2}f_{n}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+连续谱的广义统计诠释: 如果测量一个处于
+\begin_inset Formula $\Psi(\vec{r},t)$
+\end_inset
+
+态的粒子的可观测量
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+, 那么其结果一定是厄米算符
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+的本征值中的一个, 得到结果在范围
+\begin_inset Formula $df$
+\end_inset
+
+的概率是
+\begin_inset Formula $|c(f,t)|^{2}df$
+\end_inset
+
+, 
+\begin_inset Formula $c(f,t)=\int\psi_{f}^{*}(\vec{r})\Psi(\vec{r},t)d\tau$
+\end_inset
+
+.
+ 测量之后, 波函数
+\begin_inset Formula $\Psi(\vec{r},t)$
+\end_inset
+
+坍缩到对应的本征态
+\begin_inset Formula $\psi_{n}$
+\end_inset
+
+上;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+因为
+\begin_inset Formula $|c(t)|^{2}$
+\end_inset
+
+具有概率的意义, 所以
+\begin_inset Formula $\int|c(f,t)|^{2}df=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\hat{F}$
+\end_inset
+
+的期望值应该是任何可能本征值与本征值出现概率乘积的求和: 
+\begin_inset Formula $<F>=\int f|c(f,t)|^{2}df$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对于混合谱: 可以分解为离散谱与连续谱的和;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+厄米算符之间的对易关系:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若两个厄米算符
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+有完备的共同本征波函数系, 则
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+一定对易;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若两个线性厄米算符
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+对易, 则它们必有完备的共同本征波函数系;
+\end_layout
+
+\begin_layout Enumerate
+两个厄米算符
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+的对易子
+\begin_inset Formula $i\hat{C}=[\hat{A},\hat{B}]$
+\end_inset
+
+是一个反厄米算符(满足
+\begin_inset Formula $-i\hat{C}^{\dagger}=-i\hat{C}$
+\end_inset
+
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+如果不对易的厄米算符
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+的对易子中有
+\begin_inset Formula $0$
+\end_inset
+
+, 则它们有部分共同本征函数;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+力学量完全集: 确定体系状态的力学量全体;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+守恒量完全集: 哈密顿量
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+不显含时间的情况下, 力学量完全集称为守恒量完全集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+自由度: 构成完全集的独立力学量的个数;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+不确定关系: 海森伯不确定关系
+\begin_inset Formula $\sigma_{A}^{2}\sigma_{B}^{2}\ge\left(\frac{1}{2i}<[\hat{A},\hat{B}]>\right)^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+不对易的力学量一般有反对易关系
+\begin_inset Formula $[\hat{A},\hat{B}]=ic$
+\end_inset
+
+, 或
+\begin_inset Formula $[\hat{A},\hat{B}]^{\dagger}=-[\hat{A},\hat{B}]$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+一对不对易算符的客观测量被称为不相容可观测量;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+不确定关系也可以写为
+\begin_inset Formula $\sigma_{A}\sigma_{B}\ge\left|\frac{1}{2i}<[\hat{A},\hat{B}]>\right|$
+\end_inset
+
+, 不确定关系的下限被称为最小不确定性;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+坐标与动量满足
+\begin_inset Formula $[x,p_{x}]=i\hbar$
+\end_inset
+
+, 即
+\begin_inset Formula $\sigma_{x}\sigma_{p_{x}}\ge\frac{\hbar}{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+能量与时间也满足
+\begin_inset Formula $[\Delta E,\Delta t]=i\hbar$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+对于不对易的
+\begin_inset Formula $\hat{A}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{B}$
+\end_inset
+
+(
+\begin_inset Formula $[\hat{A},\hat{B}]\neq0$
+\end_inset
+
+), 无法同时唯一严格地确定它们的本征值;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+坐标算符: 坐标算符
+\begin_inset Formula $\hat{x}$
+\end_inset
+
+的本征值是
+\begin_inset Formula $\psi_{x'}(x)=\delta(x-x')$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+动量算符: 动量算符
+\begin_inset Formula $\hat{p_{x}}$
+\end_inset
+
+的本征态是平面波
+\begin_inset Formula $\psi(x)=\frac{1}{\sqrt{2\pi\hbar}}e^{\frac{i}{\hbar}p_{x}x}$
+\end_inset
+
+, 本征值是
+\begin_inset Formula $p_{x}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量算符: 轨道角动量算符
+\begin_inset Formula $\hat{\vec{L}}=\hat{\vec{r}}\times\hat{\vec{p}}$
+\end_inset
+
+, 轨道角动量力学量的完全集
+\begin_inset Formula $\{H,L^{2},L_{z}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+角动量的分量彼此简并, 但是
+\begin_inset Formula $[\hat{L}^{2},\hat{L}_{x}]=[\hat{L}^{2},\hat{L}_{y}]=[\hat{L}^{2},\hat{L}_{z}]=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+球坐标下的分量:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+角动量的平方算符: 
+\begin_inset Formula $\hat{L}^{2}=-\hbar\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^{2}\theta}\frac{\partial^{2}}{\partial\varphi^{2}}\right]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量的
+\begin_inset Formula $z$
+\end_inset
+
+分量算符: 
+\begin_inset Formula $\hat{L_{z}}=-i\hbar\frac{\partial}{\partial\varphi}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+共同的本征函数: 球谐函数
+\begin_inset Formula $Y_{lm}(\theta,\varphi)=N_{lm}P_{l}^{m}(\cos\theta)e^{im\varphi}$
+\end_inset
+
+, 其中
+\begin_inset Formula $N_{lm}=(-1)^{m}\sqrt{\frac{(2l+1)(l-|m|)!}{4\pi(l+|m|)!}}$
+\end_inset
+
+, 当
+\begin_inset Formula $m<0$
+\end_inset
+
+时, 
+\begin_inset Formula $(-1)^{m}$
+\end_inset
+
+项取为
+\begin_inset Formula $1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+勒让德多项式: 
+\begin_inset Formula $P_{l}(x)=\frac{1}{2^{l}l!}\frac{d^{l}}{dx^{l}}(x^{2}-1)^{l}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+连带勒让德多项式: 
+\begin_inset Formula $P_{m}^{l}(x)=\sqrt{1-x^{2}}^{m}\frac{d^{m}}{dx^{m}}P_{l}(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+球谐函数的正交归一性: 
+\begin_inset Formula $\int_{-1}^{1}P_{l}^{|m|}(\xi)P_{l'}^{|m|}(\xi)d\xi=\frac{(l+|m|)!}{(l-|m|)!}\frac{2}{2l+1}\delta_{ll'}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+角动量升降阶算符: 
+\begin_inset Formula $\hat{L}_{\pm}=\hat{L_{x}}\pm i\hat{L}_{y}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+如果Y是
+\begin_inset Formula $\hat{L}^{2}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{L_{z}}$
+\end_inset
+
+的共同本征函数, 那么
+\begin_inset Formula $\hat{L}_{\pm}Y$
+\end_inset
+
+一定是
+\begin_inset Formula $\hat{L}^{2}$
+\end_inset
+
+和
+\begin_inset Formula $\hat{L_{z}}$
+\end_inset
+
+的共同本征函数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{2}Y_{lm}=l(l+1)\hbar^{2}Y_{lm}$
+\end_inset
+
+, 
+\begin_inset Formula $L_{z}Y_{lm}=m\hbar Y_{lm}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+量子力学的几个绘景: 物理上可观测的物理量不会因为采用的绘景不同而改变;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+薛定谔绘景: 体系的状态矢量即波函数随时间的演化;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+波函数遵从薛定谔方程: 
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi(\vec{r},t)=\hat{H}\Psi(\vec{r},t)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+时间演化算符: 
+\begin_inset Formula $\hat{U}(t)=e^{-i\frac{\hat{H}}{\hbar}t}$
+\end_inset
+
+, 作用在波函数上使之随时间演化;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+时间演化算符是幺正的: 
+\begin_inset Formula $\hat{U}^{\dagger}(t)=\hat{U}^{-1}(t)=e^{i\frac{\hat{H}}{\hbar}t}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+波函数的一般解: 
+\begin_inset Formula $\Psi(\vec{r},t)=\sum\limits _{n}c_{n}e^{-i\frac{E_{n}}{\hbar}t}\psi_{n}(\vec{r})=e^{-i\frac{\hat{H}}{\hbar}t}\Psi(\vec{r},0)=\hat{U}(t)\Psi(\vec{r},0)$
+\end_inset
+
+ (利用本征方程);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+海森堡绘景: 波函数并不随时间演化, 体系的状态矢量即算符随时间的演化;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+力学量的期望值: 
+\begin_inset Formula $<F>=\int\Psi^{*}\hat{F}\Psi d\tau=\int[\hat{U}\Psi]^{*}\hat{F}\hat{U}\Psi d\tau=\int\Psi^{*}\hat{U}^{\dagger}\hat{F}\hat{U}\psi=\int\Psi^{*}\hat{F}(t)\Psi d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+海森堡运动方程: 
+\begin_inset Formula $\hat{F}(t)=\hat{U}^{\dagger}(t)\hat{F}\hat{U}(t)$
+\end_inset
+
+, 其时间导数
+\begin_inset Formula $\frac{\partial}{\partial t}\hat{F}(t)=\frac{i}{\hbar}[\hat{H},\hat{F}(t)]=\frac{i}{h}\hat{U}^{\dagger}(t)[\hat{H},\hat{F}]\hat{U}(t)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+相互作用绘景: 体系的状态矢量即波函数和算符随时间演化的结果;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+相互作用的哈密顿量: 
+\begin_inset Formula $\hat{H}=\hat{H}_{0}+\hat{H}'$
+\end_inset
+
+, 其中
+\begin_inset Formula $\hat{H}_{0}$
+\end_inset
+
+不显含时间, 
+\begin_inset Formula $\hat{H}'$
+\end_inset
+
+描述体系与外界的相互作用;
+\end_layout
+
+\begin_layout Enumerate
+相互作用的波函数: 
+\begin_inset Formula $\Psi(t)=e^{i\frac{\hat{H}_{0}}{\hbar}t}\Psi(t)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+相互作用方程: 
+\begin_inset Formula $i\hbar\frac{\partial}{\partial t}\Psi(t)=\hat{H}'(t)\Psi(t)$
+\end_inset
+
+, 其中
+\begin_inset Formula $\hat{H}'(t)=e^{i\frac{\hat{H}_{0}}{\hbar}t}\hat{H}'e^{-i\frac{\hat{H}_{0}}{\hbar}t}=\hat{U}_{0}^{\dagger}(t)\hat{H}'\hat{U}_{0}(t)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+力学量算符: 
+\begin_inset Formula $\hat{F}(t)=\hat{U}_{0}^{\dagger}(t)\hat{F}\hat{U}_{0}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dt}\hat{F}(t)=\frac{i}{\hbar}[\hat{H}_{0},\hat{F}(t)]$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+力学量的变换:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+变换是可实现态的条件: 若对态
+\begin_inset Formula $\Psi$
+\end_inset
+
+进行变换
+\begin_inset Formula $\hat{T}\Psi$
+\end_inset
+
+, 得到的态
+\begin_inset Formula $\hat{T}\Psi$
+\end_inset
+
+可实现的条件是:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{T}\Psi$
+\end_inset
+
+满足归一化条件
+\begin_inset Formula $\int(\hat{T}\Psi)^{*}\hat{T}\Psi d\tau=1$
+\end_inset
+
+, 即
+\begin_inset Formula $\hat{T}^{\dagger}=\hat{T}^{-1}$
+\end_inset
+
+(
+\begin_inset Formula $\hat{T}$
+\end_inset
+
+是幺正变换);
+\end_layout
+
+\begin_layout Enumerate
+变换满足薛定谔方程: 变换与哈密顿量对易, 
+\begin_inset Formula $\hat{H}\hat{T}=\hat{T}\hat{H}$
+\end_inset
+
+(
+\begin_inset Formula $[\hat{H},\hat{T}]=0$
+\end_inset
+
+);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+守恒量条件: 如果变换
+\begin_inset Formula $\hat{T}$
+\end_inset
+
+是厄米算符(
+\begin_inset Formula $\hat{T}^{\dagger}=\hat{T}$
+\end_inset
+
+), 则
+\begin_inset Formula $\hat{T}$
+\end_inset
+
+是守恒量;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+无穷小算子: 如果变换
+\begin_inset Formula $\hat{T}$
+\end_inset
+
+不是厄米算符, 则可以有
+\begin_inset Formula $\hat{T}=e^{i\epsilon\hat{G}}$
+\end_inset
+
+, 其中
+\begin_inset Formula $\epsilon$
+\end_inset
+
+为小的实数, 
+\begin_inset Formula $\hat{G}$
+\end_inset
+
+是厄米算符(称为变换
+\begin_inset Formula $\hat{T}$
+\end_inset
+
+的无穷小算子);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{G}$
+\end_inset
+
+也对哈密顿量对易, 因此
+\begin_inset Formula $\hat{G}$
+\end_inset
+
+是某种守恒量;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+常见对称性:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+动量守恒: 空间平移对称.
+ 动量算符
+\begin_inset Formula $\hat{p}=-i\hbar\vec{\nabla}$
+\end_inset
+
+, 平移算符
+\begin_inset Formula $\hat{D}(\delta\vec{r})=e^{\delta\vec{r}\cdot\frac{\hat{\vec{p}}}{i\hbar}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+角动量守恒: 空间旋转对称性.
+ 角动量算符
+\begin_inset Formula $\vec{L}=-i\hbar\vec{r}\times\vec{\nabla}=\vec{r}\times\vec{p}$
+\end_inset
+
+, 旋转算符
+\begin_inset Formula $\vec{R}(\delta\vec{\varphi})=e^{\frac{1}{i\hbar}\delta\vec{\varphi}\cdot\vec{L}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+能量守恒: 时间平移对称性.
+ 能量算符
+\begin_inset Formula $\hat{H}$
+\end_inset
+
+, 时间平移算符
+\begin_inset Formula $\hat{D}(\delta t)=e^{\delta t\cdot\frac{\hat{H}}{i\hbar}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+宇称守恒: 空间反演对称性.
+ 空间反演运算
+\begin_inset Formula $\vec{r}\to-\vec{r}$
+\end_inset
+
+, 宇称算符
+\begin_inset Formula $\vec{P}^{2}\Psi(\vec{r},t)=\vec{P}\Psi(-\vec{r},t)=\Psi(\vec{r},t)$
+\end_inset
+
+ ;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+海尔曼-费曼定理: 设系统的哈密顿量
+\begin_inset Formula $\hat{H}(\lambda)$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+为某一参量(如势阱宽度), 则
+\begin_inset Formula $\frac{\partial E_{n}}{\partial\lambda}=\left<\frac{\partial\hat{H}}{\partial\lambda}\right>_{n}=\int\psi_{n}^{*}\frac{\partial\hat{H}}{\partial\lambda}\psi_{n}d\tau$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+束缚态的维里定理: 由
+\begin_inset Formula $\frac{d}{dt}<\hat{A}\hat{B}>=<\hat{A}\frac{d\hat{B}}{dt}>+<\frac{d\hat{A}}{dt}\hat{B}>$
+\end_inset
+
+, 得
+\begin_inset Formula $\left<\frac{\vec{p}^{2}}{2m}\right>_{n}=<\hat{T}>_{n}=\frac{1}{2}<\vec{r}\cdot\vec{\nabla}V>_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+动量表象: 
+\begin_inset Formula $\hat{r}=i\hbar\frac{\partial}{\partial\vec{p}}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{H}=\frac{\vec{p}^{2}}{2m}+V\left(i\hbar\frac{\partial}{\partial\vec{p}}\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+能量-时间不确定关系: 
+\begin_inset Formula $\Delta E\Delta t\ge\frac{\hbar}{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+埃伦费斯特定理: 动量算符平均值的时间导数等于作用力的平均值, 即
+\begin_inset Formula $m\frac{d^{2}<x>}{dt^{2}}=\frac{d<p_{x}>}{dt}=<-\frac{\partial V}{\partial x}>=<F_{x}>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+虽然埃伦费斯特定理与经典力学方程很相似, 但不能认为
+\begin_inset Formula $<x>=x$
+\end_inset
+
+, 即与牛顿第二定律不同;
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
